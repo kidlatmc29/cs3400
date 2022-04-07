@@ -5,8 +5,7 @@
 def main():
   print("START OF PROGRAM")
   # opening word pairs and words file
-  wordPairs = open("hw1/threeWords.txt") # get file names for console???
-  wordLibrary = open("hw1/words.txt") 
+  wordPairs = open("hw1/threeWords.txt")
   
   for line in wordPairs:
     pair = line.split()
@@ -18,13 +17,13 @@ def main():
     else:
       print("** Looking for ladder from " + start + "->" + end) 
       # fxn call to findWordLadder()
-      findWordLadder(start, end, wordLibrary)
+      findWordLadder(start, end)
 
   wordPairs.close()
   print("END OF PROGRAM")
 
-def findWordLadder(start, end, wordLibrary):
-  words = set(wordLibrary)
+def findWordLadder(start, end):
+  words = set(open("hw1/words.txt").read().strip())
   # edge case 1 - if start and end are the same word
   if(start == end):
     print("** Ladder from " + start + " to " + end + ": " + start + "->" + end)
