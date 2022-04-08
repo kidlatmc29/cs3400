@@ -26,20 +26,32 @@ def findWordLadder(start, end, wordLib):
   elif(len(start) != len(end)):
     print("** No ladder exists from " + start + "->" + end) 
     return 0
+  #edge case 3 - if end is not in wordLib
+  elif(end not in wordLib) :
+    print("** No ladder exists from " + start + "->" + end) 
+    return 0
   
   # initialize search queue
   queue = [[start]]
-  candidates = []
+  searched = set()
 
-  #while queue: 
-  # for every character in start
-  for index in range(len(start)):
-   for letter in "abcdefghijklmnopqrstuvwxyz" :
-    # create a candidate word
-    newWord = start[:index] + letter + start[index+1:] 
-    # add candidate word to candidates lists
-    if newWord in wordLib:
-      candidates.append(newWord) 
+  while(queue) :
+    currentWord = queue.pop()[-1] # get the last entry in the candidate set
+    searched.add(currentWord)
+
+    if(currentWord == end): #if we find the end word we done
+      return 0 
+    
+    # for every character in start
+    for index in range(len(start)):
+      for letter in "abcdefghijklmnopqrstuvwxyz" :
+        # create candidate word
+        newWord = start[:index] + letter + start[index+1:] 
+     
+        if newWord in wordLib and newWord not in searched:
+          queue.append(newWord)
+          searched.add(newWord)
+
   return 0  
 
 if __name__ == "__main__":
