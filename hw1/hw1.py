@@ -6,17 +6,18 @@ def main():
   print("START OF PROGRAM")
   # opening word pairs and words file
   wordPairs = open("hw1/threeWords.txt")
+  wordLib = set(open("hw1/words.txt").read().split())
   
   for line in wordPairs:
     start,end = line.split()
-    print("** Looking for ladder from " + start + "->" + end) 
+    print("\n** Looking for ladder from " + start + "->" + end) 
     # fxn call to findWordLadder()
-    findWordLadder(start, end)
+    findWordLadder(start, end, wordLib)
 
   wordPairs.close()
-  print("END OF PROGRAM")
+  print("\nEND OF PROGRAM")
 
-def findWordLadder(start, end):
+def findWordLadder(start, end, wordLib):
   # edge case 1 - if start and end are the same word
   if(start == end):
     print("** Ladder from " + start + " to " + end + ": " + start + "->" + end)
@@ -30,17 +31,15 @@ def findWordLadder(start, end):
   queue = [[start]]
   candidates = []
 
-  while len(queue) > 0: 
-    # for every character in start
-    for index in range(len(start)):
-      for letter in "abcdefghijklmnopqrstuvwxyz" :
-        # create a candidate word
-        newWord = start[:index] + letter + start[index+1:] 
-        print(newWord)
-        # add candidate word to candidates lists 
-        if(newWord in words):
-          print("adding " + newWord)
-          candidates.append(newWord)
+  #while queue: 
+  # for every character in start
+  for index in range(len(start)):
+   for letter in "abcdefghijklmnopqrstuvwxyz" :
+    # create a candidate word
+    newWord = start[:index] + letter + start[index+1:] 
+    # add candidate word to candidates lists
+    if newWord in wordLib:
+      candidates.append(newWord) 
   return 0  
 
 if __name__ == "__main__":
