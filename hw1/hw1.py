@@ -8,25 +8,22 @@ def main():
   wordPairs = open("hw1/threeWords.txt")
   
   for line in wordPairs:
-    pair = line.split()
-    start = pair[0]
-    end = pair[1]
-
-    if len(start) != len(end):
-      print("** No ladder exists from " + start + "->" + end) 
-    else:
-      print("** Looking for ladder from " + start + "->" + end) 
-      # fxn call to findWordLadder()
-      findWordLadder(start, end)
+    start,end = line.split()
+    print("** Looking for ladder from " + start + "->" + end) 
+    # fxn call to findWordLadder()
+    findWordLadder(start, end)
 
   wordPairs.close()
   print("END OF PROGRAM")
 
 def findWordLadder(start, end):
-  words = set(open("hw1/words.txt").read().strip())
   # edge case 1 - if start and end are the same word
   if(start == end):
     print("** Ladder from " + start + " to " + end + ": " + start + "->" + end)
+    return 0
+  # edge case 2 - if start and end lengths are not equal
+  elif(len(start) != len(end)):
+    print("** No ladder exists from " + start + "->" + end) 
     return 0
   
   # initialize search queue
@@ -39,12 +36,11 @@ def findWordLadder(start, end):
       for letter in "abcdefghijklmnopqrstuvwxyz" :
         # create a candidate word
         newWord = start[:index] + letter + start[index+1:] 
+        print(newWord)
         # add candidate word to candidates lists 
         if(newWord in words):
           print("adding " + newWord)
           candidates.append(newWord)
-  queue.pop() # for debugging 
-  
   return 0  
 
 if __name__ == "__main__":
