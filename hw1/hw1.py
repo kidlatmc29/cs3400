@@ -2,6 +2,8 @@
 # Isabel Ovalles
 # CPSC 3400
 
+from collections import deque 
+
 def main():
   print("START OF PROGRAM")
   # opening word pairs and words file
@@ -32,24 +34,23 @@ def findWordLadder(start, end, wordLib):
     return 0
   
   # initialize search queue
-  queue = [[start]]
+  queue = deque()
   searched = set()
 
-  while(queue) :
-    currentWord = queue.pop()[-1] # get the last entry in the candidate set
-    searched.add(currentWord)
+  queue.append([start])
 
-    if(currentWord == end): #if we find the end word we done
+  while(queue) :
+    word = queue.popleft() # get the last entry in the candidate set
+    if(word == end): #if we find the end word we done
+      print("word ladder found!")
       return 0 
-    
-    # for every character in start
     for index in range(len(start)):
       for letter in "abcdefghijklmnopqrstuvwxyz" :
         # create candidate word
         newWord = start[:index] + letter + start[index+1:] 
-     
         if newWord in wordLib and newWord not in searched:
-          queue.append(newWord)
+          queue.append((newWord))
+          print(newWord)
           searched.add(newWord)
 
   return 0  
