@@ -46,34 +46,30 @@ def findWordLadder(start, end, wordList):
     if len(word) == startLength:
       processedWords.add(word)
 
-
   while(queue):
     # pop the first entry 
     ladder = queue.popleft() 
-
     currentWord = ladder[-1]
-    #print("currentWord = ", currentWord)
     for i in range(len(start)):
      
       candidateWords = findCandidateWords(currentWord)
       for newWord in candidateWords:
-        if(currentWord == end):
+        if(newWord == end):
           # print out ladder
-          queue[0].append(currentWord)
-          print("** Ladder found: ", queue[0])
+          ladder.append(newWord)
+          print("** Ladder found: ", ladder)
           return 0
         if(newWord not in searched and newWord in processedWords):
-          #print("appending ",ladder," ", newWord)
+          #print("appending ", ladder," ", newWord)
           queue.append(ladder + [newWord])
           searched.add(newWord)
-        # append new ladder if next word is not searched and if in wordList
+          # append new ladder if next word is not searched and if in wordList
   
   print("** No ladder exists from " + start + "->" + end) 
   return 0
   
 
 def findCandidateWords(currentWord):
-  #print("inFindNextWord")
   tempList = []
   for i in range(len(currentWord)):
     for char in "abcdefghijklmnopqrstuvwxyz":
@@ -81,6 +77,5 @@ def findCandidateWords(currentWord):
       tempList.append(newWord)
   return tempList
 
-  
 if __name__ == "__main__":
   main()
