@@ -7,7 +7,7 @@ from collections import deque
 def main():
   print("START OF PROGRAM")
   # opening word pairs and words file
-  wordPairs = open("hw1/threeWords.txt")
+  wordPairs = open("hw1/pairs.txt")
   wordList = set(open("hw1/words.txt").read().split())
   
   for line in wordPairs:
@@ -52,15 +52,16 @@ def findWordLadder(start, end, wordList):
     ladder = queue.popleft() 
 
     currentWord = ladder[-1]
-    for i in range(len(currentWord)):
-      if(currentWord == end):
-        # print out ladder
-        queue[0].append(currentWord)
-        print("** Ladder found: ", queue[0])
-        return 0
+    #print("currentWord = ", currentWord)
+    for i in range(len(start)):
      
       candidateWords = findCandidateWords(currentWord)
       for newWord in candidateWords:
+        if(currentWord == end):
+          # print out ladder
+          queue[0].append(currentWord)
+          print("** Ladder found: ", queue[0])
+          return 0
         if(newWord not in searched and newWord in processedWords):
           #print("appending ",ladder," ", newWord)
           queue.append(ladder + [newWord])
