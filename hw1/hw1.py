@@ -44,10 +44,7 @@ def findWordLadder(start, end, wordList):
   queue.append([start])
   searched.add(start)
 
-  sameLengthWords = set()
-  for word in wordList:
-    if len(word) == startLength:
-      sameLengthWords.add(word)
+  sameLengthWords = findSameLengthWords(wordList, startLength)
 
   while(queue):
     ladder = queue.popleft() 
@@ -79,5 +76,12 @@ def findCandidateWords(currentWord):
       tempList.append(newWord)
   return tempList
 
+def findSameLengthWords(wordList, startLength):
+  sameLengthWords = set()
+  for word in wordList:
+    if len(word) == startLength:
+      sameLengthWords.add(word)
+  return sameLengthWords
+  
 if __name__ == "__main__":
   main()
