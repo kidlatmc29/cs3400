@@ -4,6 +4,8 @@
 
 from collections import deque 
 
+# PRE: the need files are named as pairs.txt and words.txt
+# POST: N/A 
 def main():
   print("START OF PROGRAM")
   wordPairs = open("hw1/pairs.txt")
@@ -17,18 +19,22 @@ def main():
   wordPairs.close()
   print("\nEND OF PROGRAM")
 
+# PRE: wordList is a set of words from the file word.txt
+# POST: prints out the word ladder given the start and end  words, else will
+#         print the appropriate error message
 def findWordLadder(start, end, wordList):
+  noLadderErrorMsg = "** No ladder exists from " + start + "->" + end
   # edge case 1 - if start and end are the same word
   if(start == end):
     print("** Ladder found: " + start + " to " + end + ": " + start + "->" + end)
     return 0
   # edge case 2 - if start and end lengths are not equal
   elif(len(start) != len(end)):
-    print("** No ladder exists from " + start + "->" + end) 
+    print(noLadderErrorMsg) 
     return 0
-  #edge case 3 - if end is not in wordLib
+  # edge case 3 - if end is not in wordLib
   elif(end not in wordList) :
-    print("** No ladder exists from " + start + "->" + end) 
+    print(noLadderErrorMsg) 
     return 0
   
   queue = deque()
@@ -59,9 +65,12 @@ def findWordLadder(start, end, wordList):
           queue.append(ladder + [newWord])
           searched.add(newWord)
   
-  print("** No ladder exists from " + start + "->" + end) 
+  print(noLadderErrorMsg) 
   return 0
   
+# PRE: currentWord is a str
+# POST: returns a list of strings of all possible words that are one letter
+#        different than currentWord
 def findCandidateWords(currentWord):
   tempList = []
   for i in range(len(currentWord)):
