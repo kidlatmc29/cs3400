@@ -8,52 +8,78 @@ def main():
   print("START OF PROGRAM")
   # opening word pairs and words file
   wordPairs = open("hw1/threeWords.txt")
-  wordLib = set(open("hw1/words.txt").read().split())
+  wordList = set(open("hw1/words.txt").read().split())
   
   for line in wordPairs:
     start,end = line.split()
     print("\n** Looking for ladder from " + start + "->" + end) 
     # fxn call to findWordLadder()
-    findWordLadder(start, end, wordLib)
+    findWordLadder(start, end, wordList)
 
   wordPairs.close()
   print("\nEND OF PROGRAM")
 
-def findWordLadder(start, end, wordLib):
+def findWordLadder(start, end, wordList):
   # edge case 1 - if start and end are the same word
   if(start == end):
-    print("** Ladder from " + start + " to " + end + ": " + start + "->" + end)
+    print("** Ladder found: " + start + " to " + end + ": " + start + "->" + end)
     return 0
   # edge case 2 - if start and end lengths are not equal
   elif(len(start) != len(end)):
     print("** No ladder exists from " + start + "->" + end) 
     return 0
   #edge case 3 - if end is not in wordLib
-  elif(end not in wordLib) :
+  elif(end not in wordList) :
     print("** No ladder exists from " + start + "->" + end) 
     return 0
   
-  # initialize search queue
   queue = deque()
   searched = set()
+  startLength = len(start)
 
   queue.append([start])
+  searched.add(start)
 
-  while(queue) :
-    word = queue.popleft() # get the last entry in the candidate set
-    if(word == end): #if we find the end word we done
-      print("word ladder found!")
-      return 0 
-    for index in range(len(start)):
-      for letter in "abcdefghijklmnopqrstuvwxyz" :
-        # create candidate word
-        newWord = start[:index] + letter + start[index+1:] 
-        if newWord in wordLib and newWord not in searched:
-          queue.append((newWord))
-          print(newWord)
+  # create smaller wordList for specific startWord based on word length
+  processedWords = set()
+  for word in wordList:
+    if len(word) == startLength:
+      processedWords.add(word)
+
+
+  while(queue):
+    # pop the first entry 
+    ladder = queue.popleft() 
+
+    currentWord = ladder[-1]
+    for i in range(len(currentWord)):
+      if(currentWord == end):
+        # print out ladder
+        queue[0].append(currentWord)
+        print("** Ladder found: ", queue[0])
+        return 0
+     
+      candidateWords = findCandidateWords(currentWord)
+      for newWord in candidateWords:
+        if(newWord not in searched and newWord in processedWords):
+          #print("appending ",ladder," ", newWord)
+          queue.append(ladder + [newWord])
           searched.add(newWord)
+        # append new ladder if next word is not searched and if in wordList
+  
+  print("** No ladder exists from " + start + "->" + end) 
+  return 0
+  
 
-  return 0  
+def findCandidateWords(currentWord):
+  #print("inFindNextWord")
+  tempList = []
+  for i in range(len(currentWord)):
+    for char in "abcdefghijklmnopqrstuvwxyz":
+      newWord = currentWord[:i] + char + currentWord[i+1:]
+      tempList.append(newWord)
+  return tempList
 
+  
 if __name__ == "__main__":
   main()
