@@ -6,14 +6,12 @@ from collections import deque
 
 def main():
   print("START OF PROGRAM")
-  # opening word pairs and words file
   wordPairs = open("hw1/pairs.txt")
   wordList = set(open("hw1/words.txt").read().split())
   
   for line in wordPairs:
     start,end = line.split()
     print("\n** Looking for ladder from " + start + "->" + end) 
-    # fxn call to findWordLadder()
     findWordLadder(start, end, wordList)
 
   wordPairs.close()
@@ -40,35 +38,30 @@ def findWordLadder(start, end, wordList):
   queue.append([start])
   searched.add(start)
 
-  # create smaller wordList for specific startWord based on word length
-  processedWords = set()
+  sameLengthWords = set()
   for word in wordList:
     if len(word) == startLength:
-      processedWords.add(word)
+      sameLengthWords.add(word)
 
   while(queue):
-    # pop the first entry 
     ladder = queue.popleft() 
     currentWord = ladder[-1]
     for i in range(len(start)):
-     
       candidateWords = findCandidateWords(currentWord)
       for newWord in candidateWords:
         if(newWord == end):
-          # print out ladder
           ladder.append(newWord)
-          print("** Ladder found: ", ladder)
+          print("** Ladder found: ", end ="")
+          print(*ladder, sep = " -> ")
           return 0
-        if(newWord not in searched and newWord in processedWords):
+        if(newWord not in searched and newWord in sameLengthWords):
           #print("appending ", ladder," ", newWord)
           queue.append(ladder + [newWord])
           searched.add(newWord)
-          # append new ladder if next word is not searched and if in wordList
   
   print("** No ladder exists from " + start + "->" + end) 
   return 0
   
-
 def findCandidateWords(currentWord):
   tempList = []
   for i in range(len(currentWord)):
