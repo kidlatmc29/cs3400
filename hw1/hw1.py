@@ -4,12 +4,12 @@
 
 from collections import deque 
 
-# PRE: the need files are named as pairs.txt and words.txt
+# PRE: the needed files are named as pairs.txt and words.txt
 # POST: N/A 
 def main():
   print("START OF PROGRAM")
-  wordPairs = open("hw1/pairs.txt")
-  wordList = set(open("hw1/words.txt").read().split())
+  wordPairs = open("pairs.txt")
+  wordList = set(open("words.txt").read().split())
   
   for line in wordPairs:
     start,end = line.split()
@@ -76,6 +76,8 @@ def findCandidateWords(currentWord):
       tempList.append(newWord)
   return tempList
 
+# PRE: wordList is a set of strings
+# POST: returns a set of str that are the same length
 def findSameLengthWords(wordList, startLength):
   sameLengthWords = set()
   for word in wordList:
