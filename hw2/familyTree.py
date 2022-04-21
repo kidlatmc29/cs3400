@@ -67,13 +67,17 @@ class Person():
             families[fam].printFamily(self._id,prefix)
 
   # ============================================================================
-    def isDescendant(personId):
-      print("in isDescendant")
-      for child in families[fam]._children:
-        if persons[child].isDescendant(personId):
-          print("IS A DESCENDANT")
-          return True
-      print("IS NOT A DESCENDANT")
+    def isDescendant(self, personId):
+      if self._id == personId: # check self id against personId
+       return True
+
+      for fam in self._asSpouse: # for every spouse get the family
+        for child in families[fam]._children: # for every child in the family
+          if(persons[child].isDescendant(personId)): # call isDescendant 
+            return True 
+          # recursion stops if descendant is found
+          # OR self is not a spouse 
+
       return False
   # ============================================================================
     def name (self):
@@ -135,13 +139,6 @@ class Family():
     def addChild(self, personRef):
         # Adds the string (personRef) indicating a new child to the list
         self._children.append(personRef)
-
-  # ============================================================================
-  #  def isInFamily(self, personId):
-  #    # checks if given personID is in the family, returns
-  #    for child in self._children:
-  #      persons[child].isDescendant(personId)
-  # ============================================================================
 
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse

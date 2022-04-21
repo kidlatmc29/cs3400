@@ -30,7 +30,7 @@ def runKennedyTests():
         print()
 
     print()
-    doPrint = input("Test isDescendant?")
+    doPrint = input("Test is Descendant?")
     if doPrint in 'yY':
         print()
         print('**** Tests of isDescendant')
