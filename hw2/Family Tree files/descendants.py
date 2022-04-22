@@ -66,44 +66,6 @@ class Person():
         for fam in self._asSpouse:
             families[fam].printFamily(self._id,prefix)
 
-  # ============================================================================
-    def isDescendant(self, personId):
-      if self._id == personId: # check self id against personId
-       return True
-
-      for fam in self._asSpouse: # for every spouse get the family
-        for child in families[fam]._children: # for every child in the family
-          if(persons[child].isDescendant(personId)): # call isDescendant 
-            return True 
-          # recursion stops if descendant is found
-          # OR self is not a spouse 
-
-      return False
-  # ============================================================================
-    def printAncestors(self,prefix=''):
-      if(prefix == ""):
-        prefix = '0'
-      
-      # if person is part of a family, print out
-      if(self._asChild):
-        #print(prefix, self.name())
-        # for each spouse in the family
-        family = getFamily(self._asChild)
-        if(family):
-          nextPrefix = int(prefix, base = 10) + 1
-          s1 = getPerson(family._spouse1[0])
-          s2 = getPerson(family._spouse2[0])
-          if(s1):
-            s1.printAncestors(str(nextPrefix))
-          if(s2):
-            s2.printAncestors(str(nextPrefix))
-        else:
-          print(prefix,self.name())   
-      #print("prefix = ",prefix)
-      spaces = (" " * int(prefix, base = 10))
-      print(spaces,prefix,self.name())
-      
-  # ============================================================================
     def name (self):
         # returns a simple name string 
         return self._given + ' ' + self._surname.upper()\
@@ -145,6 +107,7 @@ class Family():
     # An instance is created when an Family (FAM) GEDCOM record is processed.
     #-------------------------------------------------------------------
 
+
     def __init__(self, ref):
         # Initializes a new Family object, storing the string (ref) by
         # which it can be referenced.
@@ -163,7 +126,7 @@ class Family():
     def addChild(self, personRef):
         # Adds the string (personRef) indicating a new child to the list
         self._children.append(personRef)
-
+        
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse
         # and recursively invoke printDescendants on children

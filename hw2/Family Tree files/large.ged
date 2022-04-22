@@ -1,0 +1,1324 @@
+0 HEAD
+1 SOUR FTW
+2 VERS 7.5
+2 NAME Family Tree Maker for Windows
+2 CORP Genealogy.com
+3 ADDR 39500 Stevenson Pl.  #204
+4 CONT Fremont, CA 95439
+3 PHON (510) 794-6850
+1 DEST FTM
+1 DATE 13 NOV 2000
+1 CHAR ANSI
+1 SUBM @SUBM@
+1 FILE C:\AA GED\Personal\Family Trees\WalterDarringSr.GED
+1 GEDC
+2 VERS 5.5
+0 @SUBM@ SUBM
+0 @I0086@ INDI
+1 NAME William Charles /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 25 JAN 1881
+2 PLAC St. James. LA
+1 DEAT
+2 DATE 10 NOV 1955
+2 PLAC New Orleans, LA
+1 FAMS @F007@
+1 FAMC @F009@
+0 @I0090@ INDI
+1 NAME Armand Elphage /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 20 MAR 1854
+2 PLAC Ascension, LA
+1 DEAT
+2 DATE 3 MAR 1924
+2 PLAC New Orleans, LA
+1 FAMS @F009@
+1 FAMC @F025@
+1 NOTE @NI0090@
+0 @I0091@ INDI
+1 NAME Julie Marie /Courreges/
+1 SEX F
+1 BIRT
+2 DATE 1 JUN 1862
+2 PLAC St. James Parish. LA
+1 DEAT
+2 DATE 29 MAY 1938
+2 PLAC New Orleans, LA
+1 FAMS @F009@
+1 FAMC @F010@
+1 NOTE @NI0091@
+0 @I0106@ INDI
+1 NAME Jean Adolph /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 8 AUG 1825
+2 PLAC Ascensioin, LA
+1 FAMS @F025@
+1 FAMC @F026@
+0 @I0107@ INDI
+1 NAME Marguerite M. /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 7 APR 1835
+2 PLAC Convent, LA
+1 FAMS @F025@
+1 FAMC @F181@
+0 @I0108@ INDI
+1 NAME Edward /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 5 JAN 1798
+2 PLAC Ascensioin, LA
+1 FAMS @F026@
+1 FAMC @F027@
+0 @I0109@ INDI
+1 NAME Marie L. /Mollere/
+1 SEX F
+1 BIRT
+2 DATE 5 SEP 1804
+2 PLAC Ascensioin, LA
+1 FAMS @F026@
+0 @I0110@ INDI
+1 NAME Joseph /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1769
+2 PLAC Ascension, LA
+1 FAMS @F027@
+1 FAMC @F028@
+0 @I0111@ INDI
+1 NAME Anne Martha /Blanchard/
+1 SEX F
+1 BIRT
+2 DATE BET. 1762 - 1780
+1 FAMS @F027@
+1 FAMC @F179@
+0 @I0112@ INDI
+1 NAME Isaac /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1746
+2 PLAC Grand-Pre, Acadia, Nova Scotia, Canada
+1 DEAT
+2 DATE 21 JUN 1794
+2 PLAC Ascension Parish, LA
+1 FAMS @F028@
+1 FAMS @F388@
+1 FAMC @F031@
+0 @I0113@ INDI
+1 NAME Marie Rose /Melancon/
+1 SEX F
+1 BIRT
+2 DATE 25 AUG 1745
+2 PLAC St. Charles des Mines, Acadia
+1 DEAT
+2 DATE 12 DEC 1781
+2 PLAC Ascension Parish, LA
+1 FAMS @F028@
+1 FAMC @F029@
+0 @I0114@ INDI
+1 NAME Jean-Baptiste /Melancon/
+1 SEX M
+1 BIRT
+2 DATE 1706
+2 PLAC Grand Pre, Acadia
+1 DEAT
+2 DATE BET. 1735 - 1797
+2 PLAC Maryland
+1 FAMS @F029@
+1 FAMC @F030@
+1 NOTE @NI0114@
+0 @I0115@ INDI
+1 NAME Madeleine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1 OCT 1712
+2 PLAC St. Charles Parish, Grand Pre, Acadia
+1 BIRT
+2 DATE 1712
+1 DEAT
+2 DATE BET. 1735 - 1806
+2 PLAC Louisiana
+1 FAMS @F029@
+1 FAMC @F287@
+0 @I0118@ INDI
+1 NAME Desire /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1717
+2 PLAC Grand-Pre, Acadia, Nova Scotia, Canada
+1 DEAT
+2 DATE 15 MAR 1777
+2 PLAC Donaldsonville, Ascension, LA
+1 FAMS @F031@
+1 FAMC @F034@
+1 NOTE @NI0118@
+0 @I0119@ INDI
+1 NAME Marie-Madeleine /Landry/
+1 SEX F
+1 BIRT
+2 DATE 23 NOV 1717
+2 PLAC Grand Pre, Acadia
+1 DEAT
+2 DATE 14 OCT 1786
+2 PLAC Ascension, LA
+1 FAMS @F031@
+1 FAMC @F032@
+0 @I0120@ INDI
+1 NAME Jean /Landry/
+1 SEX M
+1 BIRT
+2 DATE 1663
+2 PLAC Port Royal, Acadia
+1 DEAT
+2 PLAC Boulogne-sur-Mer, France
+1 FAMS @F032@
+0 @I0121@ INDI
+1 NAME Claire /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1700
+2 PLAC St. Charles des Mines, Acadia
+1 FAMS @F032@
+1 FAMC @F033@
+0 @I0122@ INDI
+1 NAME Rene /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE ABT. DEC 1685
+2 PLAC Grand Pre, Acadia
+1 DEAT
+2 PLAC St. Charles des Mines, Acadia
+1 FAMS @F033@
+1 FAMC @F173@
+1 NOTE @NI0122@
+0 @I0123@ INDI
+1 NAME Jeanne /Landry/
+1 SEX F
+1 BIRT
+2 DATE 1685
+2 PLAC Grand Pre, Acadia
+1 DEAT
+2 DATE BET. 1732 - 1780
+1 FAMS @F033@
+1 FAMC @F153@
+0 @I0124@ INDI
+1 NAME Jean /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1685
+2 PLAC Port Royal, Acadia
+1 DEAT
+2 DATE ABT. 10 JUN 1747
+2 PLAC Port Royal, Acadia
+1 FAMS @F034@
+1 FAMC @F042@
+0 @I0125@ INDI
+1 NAME Jeanne /Bourgeois/
+1 SEX F
+1 BIRT
+2 DATE 1687
+2 PLAC Port Royal, Acadia
+1 DEAT
+2 DATE BET. 1713 - 1781
+1 FAMS @F034@
+1 FAMC @F035@
+0 @I0132@ INDI
+1 NAME Andre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1659
+2 PLAC Port Royal, Acadia, Nova Scotia
+1 DEAT
+2 DATE 4 MAY 1743
+2 PLAC St. Charles des Mines, Acadia
+1 FAMS @F042@
+1 FAMC @F043@
+1 NOTE @NI0132@
+0 @I0133@ INDI
+1 NAME Jeanne-Marie /Dugas/
+1 SEX F
+1 BIRT
+2 DATE 1665
+2 PLAC Port Royal, Acadia, Nova Scotia
+1 DEAT
+2 DATE 13 JAN 1733/34
+2 PLAC St. Charles des Mines, Acadia, Canada
+1 FAMS @F042@
+1 FAMC @F185@
+0 @I0137@ INDI
+1 NAME Francoise /Gaudet/
+1 SEX F
+1 BIRT
+2 DATE 1623
+2 PLAC Martaize, Loudon, Vienne, France
+1 BIRT
+2 DATE 1626
+1 DEAT
+2 DATE BET. 1698 - 1700
+2 PLAC Port Royal, Acadia
+1 FAMS @F465@
+1 FAMS @F043@
+1 FAMC @F044@
+0 @I0141@ INDI
+1 NAME Rene /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE ABT. 1586
+2 PLAC D'Aulnay, France
+1 DEAT
+2 DATE BET. 1629 - 1689
+1 FAMS @F045@
+1 FAMC @F046@
+1 NOTE @NI0141@
+0 @I0142@ INDI
+1 NAME (?) W. /LeBlanc/
+1 SEX F
+1 FAMS @F045@
+0 @I0499@ INDI
+1 NAME Jacques Daniel /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1651
+2 PLAC Port Royal, Acadia
+1 BIRT
+2 DATE 1651
+1 DEAT
+2 DATE AFT. 26 MAY 1731
+2 PLAC St Charles des Mines, Acadia
+1 FAMS @F173@
+1 FAMC @F043@
+1 NOTE @NI0499@
+0 @I0500@ INDI
+1 NAME Catherine /Hebert/
+1 SEX F
+1 BIRT
+2 DATE 1656
+2 PLAC Port Royal, Acadia
+1 DEAT
+2 PLAC St. Charles des Mines, Acadia
+1 FAMS @F173@
+1 FAMC @F174@
+0 @I0503@ INDI
+1 NAME Daniel /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1626
+2 PLAC Martaize, Loudon, Vienne, France
+1 DEAT
+2 DATE BET. 1695 - 1698
+2 PLAC Port Royal, Acadia
+1 FAMS @F043@
+1 FAMC @F045@
+1 NOTE @NI0503@
+0 @I0523@ INDI
+1 NAME Eunice /LeBlanc/
+1 SEX F
+1 FAMS @F300@
+1 FAMC @F009@
+0 @I0524@ INDI
+1 NAME Emily /LeBlanc/
+1 SEX F
+1 FAMS @F429@
+1 FAMC @F009@
+0 @I0525@ INDI
+1 NAME Inez Marie /LeBlanc/
+1 SEX F
+1 FAMS @F428@
+1 FAMC @F009@
+0 @I0526@ INDI
+1 NAME Joseph Wilfred /LeBlanc/
+1 SEX M
+1 FAMS @F301@
+1 FAMC @F009@
+0 @I0527@ INDI
+1 NAME Novell /LeBlanc/
+1 SEX F
+1 FAMC @F009@
+0 @I0528@ INDI
+1 NAME Hypolite /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 12 DEC 1880
+1 DEAT
+2 DATE MAY 1963
+1 FAMC @F009@
+0 @I0529@ INDI
+1 NAME Pearl /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1890
+2 PLAC Thibodaux, Lafourche, LA
+1 DEAT
+2 DATE 16 OCT 1990
+2 PLAC New Orleans, LA
+1 FAMS @F302@
+1 FAMS @F303@
+1 FAMC @F009@
+0 @I0534@ INDI
+1 NAME Anne /Bourgeois/
+1 SEX F
+1 BIRT
+2 DATE 1661
+2 PLAC Acadia
+1 BIRT
+2 DATE 1661
+1 DEAT
+2 DATE 28 DEC 1747
+2 PLAC Grand Pre, Acadia
+1 FAMS @F286@
+1 FAMC @F041@
+0 @I0780@ INDI
+1 NAME Rene /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1657
+2 PLAC Grand Pre, Acadia
+1 DEAT
+2 DATE 3 JAN 1733/34
+2 PLAC St. Charles des Mines, Acadia
+1 FAMS @F286@
+1 FAMC @F043@
+0 @I0790@ INDI
+1 NAME Jacques /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1680
+2 PLAC St. Charles des Mines, Acadia
+1 DEAT
+2 DATE OCT 1755
+2 PLAC Grand Pre, Acadia
+1 FAMS @F287@
+1 FAMC @F286@
+0 @I0791@ INDI
+1 NAME Catherine /Landry/
+1 SEX F
+1 BIRT
+2 DATE 1684
+2 PLAC Acadia
+1 BIRT
+2 DATE 1684
+1 DEAT
+2 DATE 1754
+1 FAMS @F287@
+1 FAMC @F175@
+0 @I1005@ INDI
+1 NAME Jean /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1705
+2 PLAC Acadia
+1 FAMC @F034@
+0 @I1006@ INDI
+1 NAME Joseph /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1708
+2 PLAC Acadia
+1 FAMC @F034@
+0 @I1007@ INDI
+1 NAME Marie /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 17 FEB 1710/11
+2 PLAC Grand Pre, Acadia
+1 FAMC @F034@
+0 @I1008@ INDI
+1 NAME Pierre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1715
+2 PLAC Acadia
+1 FAMC @F034@
+0 @I1009@ INDI
+1 NAME Sylvain /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 5 NOV 1719
+2 PLAC Pisiguit, Acadia
+1 FAMC @F034@
+0 @I1010@ INDI
+1 NAME Claude /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 11 APR 1723
+2 PLAC Grand Pre, Acadia
+1 FAMC @F034@
+0 @I1011@ INDI
+1 NAME Marguerite /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 15 NOV 1724
+2 PLAC Grand Pre, Acadia
+1 FAMC @F034@
+0 @I1012@ INDI
+1 NAME Marie-Joseph /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1729
+2 PLAC Pisiguit, Acadia
+1 FAMC @F034@
+0 @I1013@ INDI
+1 NAME Anne-Marie /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1729
+2 PLAC Acadia
+1 FAMC @F034@
+0 @I1014@ INDI
+1 NAME Marine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1758
+1 FAMC @F031@
+0 @I1015@ INDI
+1 NAME Simon /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1741
+2 PLAC Grand Pre, Acadia
+1 FAMC @F031@
+0 @I1016@ INDI
+1 NAME Madelaine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1742
+2 PLAC Grand Pre, Acadia
+1 FAMC @F031@
+0 @I1017@ INDI
+1 NAME Marie-Marthe /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1748
+2 PLAC Grand Pre, Acadia
+1 FAMC @F031@
+0 @I1018@ INDI
+1 NAME Jerome /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1749
+2 PLAC Grand Pre, Acadia
+1 FAMC @F031@
+0 @I1019@ INDI
+1 NAME Isabelle Elizabeth /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1751
+2 PLAC Grand Pre, Acadia
+1 FAMC @F031@
+0 @I1020@ INDI
+1 NAME Anne-Marine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1755
+2 PLAC Grand Pre, Acadia
+1 FAMC @F031@
+0 @I1021@ INDI
+1 NAME Osite /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1760
+2 PLAC Maryland
+1 FAMC @F031@
+0 @I1022@ INDI
+1 NAME Benjamin Desire /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1760
+2 PLAC Maryland
+1 FAMC @F031@
+0 @I1023@ INDI
+1 NAME Anselme /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1763
+2 PLAC Maryland
+1 FAMC @F031@
+0 @I1024@ INDI
+1 NAME Gregoire /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE BET. 1765 - 1769
+2 PLAC St. James Parish, Louisiana
+1 FAMC @F031@
+0 @I1025@ INDI
+1 NAME Alexis /Landry/
+1 SEX M
+1 BIRT
+2 DATE 1721
+2 PLAC Grand Pre, Acadia
+1 FAMC @F032@
+0 @I1026@ INDI
+1 NAME Osite /Landry/
+1 SEX F
+1 BIRT
+2 DATE 5 MAY 1743
+2 PLAC Grand Pre, Acadia
+1 FAMC @F032@
+0 @I1027@ INDI
+1 NAME Joseph-Dominique /Landry/
+1 SEX M
+1 BIRT
+2 DATE 18 NOV 1744
+2 PLAC Grand Pre, Acadia
+1 FAMC @F032@
+0 @I1028@ INDI
+1 NAME Marie-Francoise /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1653
+2 PLAC Port Royal, Acadia
+1 DEAT
+2 DATE 1680
+1 FAMC @F043@
+0 @I1029@ INDI
+1 NAME Etienne /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1656
+2 PLAC Port Royal, Acadia
+1 FAMC @F043@
+0 @I1030@ INDI
+1 NAME Antoine /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1662
+2 PLAC Port Royal, Acadia
+1 FAMC @F043@
+0 @I1031@ INDI
+1 NAME Pierre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1664
+2 PLAC Port Royal, Acadia
+1 FAMC @F043@
+0 @I1032@ INDI
+1 NAME Francois /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1682
+2 PLAC Grand Pre, Acadia
+1 FAMC @F286@
+0 @I1033@ INDI
+1 NAME Rene /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1684
+2 PLAC Grand Pre, Acadia
+1 FAMC @F286@
+0 @I1034@ INDI
+1 NAME Pierre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1685
+2 PLAC Grand Pre, Acadia
+1 FAMC @F286@
+0 @I1035@ INDI
+1 NAME Joseph /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1688
+2 PLAC Grand Pre, Acadia
+1 FAMC @F286@
+0 @I1036@ INDI
+1 NAME Etienne /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1688
+2 PLAC Grand Pre, Acadia
+1 FAMC @F286@
+0 @I1037@ INDI
+1 NAME Claude /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1691
+2 PLAC Grand Pre, Acadia
+1 FAMC @F286@
+0 @I1038@ INDI
+1 NAME Marie /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1694
+1 FAMC @F286@
+0 @I1039@ INDI
+1 NAME Jean-Baptiste /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1697
+1 FAMC @F286@
+0 @I1040@ INDI
+1 NAME Victoire /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1700
+1 FAMC @F286@
+0 @I1041@ INDI
+1 NAME Madaleine /LeBlanc/
+1 SEX F
+1 FAMC @F173@
+0 @I1042@ INDI
+1 NAME Francois /LeBlanc/
+1 SEX M
+1 FAMC @F173@
+0 @I1043@ INDI
+1 NAME Bernard /LeBlanc/
+1 SEX M
+1 FAMC @F173@
+0 @I1044@ INDI
+1 NAME Ignace /LeBlanc/
+1 SEX M
+1 FAMC @F173@
+0 @I1045@ INDI
+1 NAME Jean /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1674
+1 FAMC @F173@
+0 @I1046@ INDI
+1 NAME Marguerite /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1676
+1 FAMC @F173@
+0 @I1047@ INDI
+1 NAME Jacques /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE ABT. 1677
+1 FAMC @F173@
+0 @I1048@ INDI
+1 NAME Marie /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1680
+1 FAMC @F173@
+0 @I1049@ INDI
+1 NAME Ccile /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1680
+1 FAMC @F173@
+0 @I1050@ INDI
+1 NAME Anne /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1681
+1 FAMC @F173@
+0 @I1051@ INDI
+1 NAME Catherine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1683
+1 FAMC @F173@
+0 @I1052@ INDI
+1 NAME Pierre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE ABT. 1684
+1 FAMC @F173@
+0 @I1054@ INDI
+1 NAME Marie /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1687
+1 FAMC @F042@
+0 @I1055@ INDI
+1 NAME Pierre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1689
+1 FAMC @F042@
+0 @I1056@ INDI
+1 NAME Anne /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1692
+1 FAMC @F042@
+0 @I1057@ INDI
+1 NAME Claude Andre /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1696
+1 FAMC @F042@
+0 @I1058@ INDI
+1 NAME Jacques /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1701
+1 DEAT
+2 DATE 10 JAN 1742/43
+1 FAMC @F042@
+0 @I1059@ INDI
+1 NAME Joseph /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1704
+1 FAMC @F042@
+0 @I1060@ INDI
+1 NAME Charles /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 1707
+1 FAMC @F042@
+0 @I1061@ INDI
+1 NAME Claire /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1710
+1 FAMC @F042@
+0 @I1133@ INDI
+1 NAME Paul /Melancon/
+1 SEX M
+1 BIRT
+2 DATE 1730
+1 FAMC @F029@
+0 @I1134@ INDI
+1 NAME Osite /Melancon/
+1 SEX F
+1 BIRT
+2 DATE 1732
+1 FAMC @F029@
+0 @I1135@ INDI
+1 NAME Joseph /Melancon/
+1 SEX M
+1 BIRT
+2 DATE 1734
+1 FAMC @F029@
+0 @I1136@ INDI
+1 NAME Charles-Honore /Melancon/
+1 SEX M
+1 BIRT
+2 DATE 1739
+1 FAMC @F029@
+0 @I1137@ INDI
+1 NAME Marguerite Blanche /Melancon/
+1 SEX F
+1 BIRT
+2 DATE 1741
+1 FAMC @F029@
+0 @I1138@ INDI
+1 NAME Charles /Melancon/
+1 SEX M
+1 BIRT
+2 DATE 1743
+1 FAMC @F029@
+0 @I1139@ INDI
+1 NAME Madeleine /Melancon/
+1 SEX F
+1 BIRT
+2 DATE 1747
+1 FAMC @F029@
+0 @I1140@ INDI
+1 NAME Elizabeth /Melancon/
+1 SEX F
+1 BIRT
+2 DATE ABT. 1755
+1 FAMC @F029@
+0 @I1141@ INDI
+1 NAME Felicite /Melancon/
+1 SEX F
+1 BIRT
+2 DATE 1763
+1 FAMC @F029@
+0 @I1142@ INDI
+1 NAME Marguerite /Babin/
+1 SEX F
+1 BIRT
+2 DATE 1750
+2 PLAC Acadia
+1 FAMS @F388@
+0 @I1143@ INDI
+1 NAME Marguerite Madeleine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 12 NOV 1785
+1 FAMC @F388@
+0 @I1144@ INDI
+1 NAME Madeleine /LeBlanc/
+1 SEX F
+1 BIRT
+2 DATE 1786
+1 FAMC @F388@
+0 @I1265@ INDI
+1 NAME Charles /LeBlanc/
+1 SEX M
+1 BIRT
+2 DATE 29 AUG 1718
+2 PLAC Grand Pre, Acadia
+1 FAMC @F287@
+0 @F007@ FAM
+1 HUSB @I0086@
+1 MARR
+2 DATE 23 JAN 1906
+2 PLAC New Orleans, LA
+0 @F009@ FAM
+1 HUSB @I0090@
+1 WIFE @I0091@
+1 CHIL @I0086@
+1 CHIL @I0523@
+1 CHIL @I0524@
+1 CHIL @I0525@
+1 CHIL @I0526@
+1 CHIL @I0527@
+1 CHIL @I0528@
+1 CHIL @I0529@
+1 MARR
+2 DATE 20 JUN 1877
+0 @F010@ FAM
+1 CHIL @I0091@
+1 MARR
+2 DATE 1856
+2 PLAC St. James, LA
+0 @F025@ FAM
+1 HUSB @I0106@
+1 WIFE @I0107@
+1 CHIL @I0090@
+1 MARR
+2 DATE 13 APR 1850
+0 @F026@ FAM
+1 HUSB @I0108@
+1 WIFE @I0109@
+1 CHIL @I0106@
+1 MARR
+2 DATE 5 MAR 1821
+2 PLAC Ascension, LA
+0 @F027@ FAM
+1 HUSB @I0110@
+1 WIFE @I0111@
+1 CHIL @I0108@
+1 MARR
+2 DATE 21 MAY 1792
+2 PLAC Ascension, LA
+0 @F028@ FAM
+1 HUSB @I0112@
+1 WIFE @I0113@
+1 CHIL @I0110@
+1 MARR
+2 DATE 5 FEB 1768
+2 PLAC Ascension Parish, LA
+0 @F029@ FAM
+1 HUSB @I0114@
+1 WIFE @I0115@
+1 CHIL @I0113@
+1 CHIL @I1133@
+1 CHIL @I1134@
+1 CHIL @I1135@
+1 CHIL @I1136@
+1 CHIL @I1137@
+1 CHIL @I1138@
+1 CHIL @I1139@
+1 CHIL @I1140@
+1 CHIL @I1141@
+1 MARR
+2 DATE 28 FEB 1728/29
+2 PLAC Grand Pre, Acadia
+0 @F030@ FAM
+1 CHIL @I0114@
+1 MARR
+2 DATE 11 JAN 1700/01
+2 PLAC St. Charles des Mines, Acadia
+0 @F031@ FAM
+1 HUSB @I0118@
+1 WIFE @I0119@
+1 CHIL @I1015@
+1 CHIL @I1016@
+1 CHIL @I0112@
+1 CHIL @I1017@
+1 CHIL @I1018@
+1 CHIL @I1019@
+1 CHIL @I1020@
+1 CHIL @I1014@
+1 CHIL @I1022@
+1 CHIL @I1021@
+1 CHIL @I1023@
+1 CHIL @I1024@
+1 MARR
+2 DATE 1740
+2 PLAC Grand Pre, Acadia, Canada
+0 @F032@ FAM
+1 HUSB @I0120@
+1 WIFE @I0121@
+1 CHIL @I0119@
+1 CHIL @I1025@
+1 CHIL @I1026@
+1 CHIL @I1027@
+1 MARR
+2 DATE ABT. JAN 1716/17
+2 PLAC Grand Pre, Acadia
+0 @F033@ FAM
+1 HUSB @I0122@
+1 WIFE @I0123@
+1 CHIL @I0121@
+1 MARR
+2 DATE ABT. 1708
+2 PLAC St. Charles des Mines, Acadia
+0 @F034@ FAM
+1 HUSB @I0124@
+1 WIFE @I0125@
+1 CHIL @I1005@
+1 CHIL @I1006@
+1 CHIL @I1007@
+1 CHIL @I1008@
+1 CHIL @I0118@
+1 CHIL @I1009@
+1 CHIL @I1010@
+1 CHIL @I1011@
+1 CHIL @I1013@
+1 CHIL @I1012@
+1 MARR
+2 DATE 25 JUL 1704
+2 PLAC Port Royal, Acadia
+0 @F035@ FAM
+1 CHIL @I0125@
+1 MARR
+2 DATE 1686
+2 PLAC Riviere St. Jean, Acadia
+0 @F041@ FAM
+1 CHIL @I0534@
+1 MARR
+2 DATE 1644
+2 PLAC Port Royal, Acadia
+0 @F042@ FAM
+1 HUSB @I0132@
+1 WIFE @I0133@
+1 CHIL @I0124@
+1 CHIL @I1054@
+1 CHIL @I1055@
+1 CHIL @I1056@
+1 CHIL @I1057@
+1 CHIL @I1058@
+1 CHIL @I1059@
+1 CHIL @I1060@
+1 CHIL @I1061@
+1 MARR
+2 DATE ABT. 1683
+2 PLAC Grand Pre, Acadia
+0 @F043@ FAM
+1 HUSB @I0503@
+1 WIFE @I0137@
+1 CHIL @I0499@
+1 CHIL @I1030@
+1 CHIL @I1028@
+1 CHIL @I1029@
+1 CHIL @I0780@
+1 CHIL @I0132@
+1 CHIL @I1031@
+1 MARR
+2 DATE 1650
+2 PLAC D'Aulnay, France
+1 MARR
+2 DATE ABT. 1645
+0 @F044@ FAM
+1 CHIL @I0137@
+1 MARR
+2 DATE 1620
+2 PLAC France
+0 @F045@ FAM
+1 HUSB @I0141@
+1 WIFE @I0142@
+1 CHIL @I0503@
+1 MARR
+2 DATE BET. 1614 - 1629
+0 @F046@ FAM
+1 CHIL @I0141@
+1 MARR
+2 DATE 17 JUL 1582
+2 PLAC Dauphine, France
+0 @F153@ FAM
+1 CHIL @I0123@
+1 MARR
+2 DATE ABT. 1684
+2 PLAC Acadia
+0 @F173@ FAM
+1 HUSB @I0499@
+1 WIFE @I0500@
+1 CHIL @I1043@
+1 CHIL @I1042@
+1 CHIL @I1044@
+1 CHIL @I1041@
+1 CHIL @I1045@
+1 CHIL @I1046@
+1 CHIL @I1047@
+1 CHIL @I1049@
+1 CHIL @I1048@
+1 CHIL @I1050@
+1 CHIL @I1051@
+1 CHIL @I1052@
+1 CHIL @I0122@
+1 MARR
+2 DATE ABT. 1673
+2 PLAC Port Royal, Acadia
+0 @F174@ FAM
+1 CHIL @I0500@
+1 MARR
+2 DATE 1645
+0 @F175@ FAM
+1 CHIL @I0791@
+1 MARR
+2 DATE ABT. 1660
+2 PLAC France
+0 @F179@ FAM
+1 CHIL @I0111@
+0 @F181@ FAM
+1 CHIL @I0107@
+0 @F185@ FAM
+1 CHIL @I0133@
+1 MARR
+2 DATE ABT. 1647
+2 PLAC Port Royal, Acadia
+1 MARR
+2 DATE 1647
+2 PLAC Port Royal, Acadia
+0 @F286@ FAM
+1 HUSB @I0780@
+1 WIFE @I0534@
+1 CHIL @I0790@
+1 CHIL @I1032@
+1 CHIL @I1033@
+1 CHIL @I1034@
+1 CHIL @I1035@
+1 CHIL @I1036@
+1 CHIL @I1037@
+1 CHIL @I1038@
+1 CHIL @I1039@
+1 CHIL @I1040@
+1 MARR
+2 DATE 1679
+2 PLAC Port Royal, Acadia
+0 @F287@ FAM
+1 HUSB @I0790@
+1 WIFE @I0791@
+1 CHIL @I0115@
+1 CHIL @I1265@
+1 MARR
+2 DATE 8 OCT 1702
+2 PLAC Grand Pre, Acadia
+0 @F300@ FAM
+1 WIFE @I0523@
+0 @F301@ FAM
+1 HUSB @I0526@
+1 MARR
+2 DATE 21 NOV 1926
+0 @F302@ FAM
+1 WIFE @I0529@
+0 @F303@ FAM
+1 WIFE @I0529@
+0 @F388@ FAM
+1 HUSB @I0112@
+1 WIFE @I1142@
+1 CHIL @I1143@
+1 CHIL @I1144@
+1 MARR
+2 DATE 21 MAY 1782
+2 PLAC Ascension Parish, LA
+0 @F428@ FAM
+1 WIFE @I0525@
+0 @F429@ FAM
+1 WIFE @I0524@
+0 @F465@ FAM
+1 WIFE @I0137@
+1 MARR
+2 DATE ABT. 1644
+2 PLAC Port Royal, Acadia
+0 @NI0090@ NOTE
+1 CONC Obituary, Times Picayune 4 Mar 1924
+1 CONT "Armond E. LeBlanc. Died March 3, 1924 at 5:45 AM Monday at age 63. 
+1 CONC Native of Ascension Parish. Resident of New Orleans for the past year. 
+1 CONC Funeral Tuesday March 4, 1924 at 10:00 AM. From the residence of J. 
+1 CONC Wilfred. 2927 Bell St. Between Gayoso and Dupre. Interment at St. Louis 
+1 CONC Cemetary III."
+0 @NI0091@ NOTE
+1 CONC Obituary, Times Picayune 30 May 1938
+1 CONT "Mrs. Armond E. LeBlanc -- Julie Marie Courrege 2701 Peniston St. Died 
+1 CONC May 29, 1938 Sunday at 11:00 AM. Mother of Mrs. M. Lane, Mrs. C.F. 
+1 CONC Daigle, Mrs. Pearl Langridge, Mrs. Frank Barronco and W. Charles, 
+1 CONC Hypolite A., J. Wilfred and Novelle E. LeBlanc. Native of St. James 
+1 CONC Parish, La. Resident of New Orleans for 14 years. Jacob Shoen Funeral 
+1 CONC Home on Canal St. Religious Service at Our Lady of Lourdes. Interment at 
+1 CONC St. Louis Cemetary III."
+0 @NI0114@ NOTE
+1 CONC He was one of the deputies on the council from Riviere de Canard held on 
+1 CONC board the ship "Beaufort" on Monday, July 31, 1749.
+0 @NI0118@ NOTE
+1 CONC The Desire LeBlanc family were natives of Acadia and were deported in 
+1 CONC 1755, moved to Oxford, Maryland, then to Louisiana, arriving in about 
+1 CONC 1767. In 1769 they occupied lot # 73 west of the Mississippi at St. 
+1 CONC Jacques.
+0 @NI0122@ NOTE
+1 CONC In his early twenties (1682), he was one of the early pioneers of a 
+1 CONC farming community on the St. Antoine River near Port Royal, which later 
+1 CONC became Grand Pre.  He was well educated and practiced as a Notary Public 
+1 CONC at Grand Pre.  He is mentioned in Longfellow's poem  "Evangeline". He, 
+1 CONC along with his wife and two small children were deported to New York in 
+1 CONC 1755. Advanced in age and ill, he returned as far as Philadelphia where 
+1 CONC he lost three other children.  He also died nearby. 
+1 CONT      1671 Acadia Census: Daniel LeBlanc, age 45 years, his wife Francoise 
+1 CONC Gaudet, age 48 years, their children seven, one girl married Francoise 
+1 CONC LeBlanc, age 18 years. The unmarried one, Jacque LeBlanc age 20 years, 
+1 CONC estienne, age 15 years, Rene aged 14 years, Andre aged 12 years, Anthoine 
+1 CONC aged nine years, pierre aged 7 years.  Their horned animals 18 and of 
+1 CONC sheep 26.  Their plowed land 10 acres in 2 locations. 
+1 CONT      1678 Census at Port Royal: Renee Le BLANC & Anne BOURGEOIS [this is 
+1 CONC a separate entry listed directly below her parents entry; no children or 
+1 CONC belongings were listed]
+1 CONT      1686 Census at Port Royal: Rene LEBLANC 29, Anne BOURGEOIS 25; 
+1 CONC children: Jacques 6, Francois 4, Rene 2
+1 CONT      1693 Census of Acadia: Rene leBlanc 38; Anne Bourgeois (wife) 30; 
+1 CONC Jacques 15; Francoise 13; Rene 11; Pierre 9; Joseph and Estienne, twins 
+1 CONC 5; Claude 2; 12 cattle, 12 sheep, 12 hogs, 16 arpents, 1 gun.
+0 @NI0132@ NOTE
+1 CONC Notes for ANDRE LEBLANC:
+1 CONT      In Census of Acadia:  1686, in  "Acadian Census 1671-1752" 
+1 CONC translated by Charles C. Trahan, page 13;  "Andre LeBlanc 26, Marie Dugas 
+1 CONC 19; child:  Jean 2."
+1 CONT      In Census of Acadia:  1693, A List of the Inhabitants of Mines, 
+1 CONC Their Families, Cultivated Land, Livestock and Firearms, in "Acadian 
+1 CONC Census 1671-1752" translated by Charles C. Trahan, page 32;  "Andre 
+1 CONC leBlanc 35; Marie Dugast (wife) 26; Jean 8; Marie 6; Pierre 4; Anne 1; 8 
+1 CONC cattle, 3 sheep, 5 hogs, 8 arpents, 1 gun."
+0 @NI0141@ NOTE
+1 CONC There appears to be quite the worldly debate as to Daniel's ancestry. I 
+1 CONC for one, have not seen (with my eyes) anything that proves Rene is 
+1 CONC Daniel's father. Not a document, not a scribbling, nary a reference. A 
+1 CONC few have suggested that this claim has been disproved. I ask you, "How 
+1 CONC can you disprove that which has yet to be proven?" I know nothing about 
+1 CONC Rene. Who is this character? It is said that Rene's father was Pierre of 
+1 CONC Alphonse. A lot of people have these persons listed in their gedcom's, 
+1 CONC why would that be? I know not. One opinion on the supposed parentage of 
+1 CONC Daniel is this: This information has no reliable basis in fact. It was 
+1 CONC originally proposed by a Mr. d'Entremont from Nova Scotia many, many 
+1 CONC years ago. He found a family named LeBlanc in the La Chausee area of 
+1 CONC France and assumed they had to be ancestors of Daniel. The reference to 
+1 CONC Alphonse is the only one in the late 1500s that refers to a family named 
+1 CONC LeBlanc (or DeBlanc, perhaps), and some researchers, desperate for links 
+1 CONC to Daniel's past, assigned him to this family. Investigations done after 
+1 CONC Mr. d'Entremont's research revealed that there was no basis to his 
+1 CONC assertions. Unfortunately, Daniel's ancestry remains a mystery. [Ben's 
+1 CONC Genealogical Research Regarding Le Blanc]
+0 @NI0499@ NOTE
+1 CONC Notes for JACQUE LEBLANC:
+1 CONT      1678 Census at Port Royal: Anthoine Hebert & Geneviefve Le Fran; Jac 
+1 CONC Le Blanc & Catherine Hebert; 2 & 2 cattle, 30 sheep; Jean Hebert & Marye 
+1 CONC Doucet, 1 boy age 1 b. 1677; 20 cattle, 10 acres
+1 CONT 1686 Census at Port Royal: Jacques LeBlanc 35, Catherine Hebert 23; 
+1 CONC children: Jean 12, Jacques 9, Pierre 9, Pierre 2, Rene 1 month, 
+1 CONC Marguerite 11, Marie 6, Ann 5, Catherine 3; 3 guns, 6 arpents, 25 cattle, 
+1 CONC 30 sheep, 15 hogs
+1 CONT      In Census of Acadia:  1686, in  "Acadian Census 1671-1752" 
+1 CONC translated by Charles C. Trahan, page 13;  "Jacques leBlanc 35, Catherine 
+1 CONC Hebert 23; children:  Jean 12, Jacques 9, Pierre 9, Pierre 2, Rene 1 
+1 CONC month, Marguerite 11, Marie 6, Anne 5, Catherine 3; 3 guns, 6 arpents, 25 
+1 CONC cattle, 30 sheep, 15 hogs."
+1 CONT      In Census of Acadia:  1693, A List of the Inhabitants of Mines, 
+1 CONC Their Families, Cultivated Land, Livestock and Firearms, in "Acadian 
+1 CONC Census 1671-1752" translated by Charles C. Trahan, page 33;
+1 CONT    "Jacques leBlanc 42; Caterine Hebert (wife) 32; Jean 19; Jacques 17; 
+1 CONC Marie 15; Antoine 13; Caterine 11; Genevieve 9; Madne 7; Francois 5; 
+1 CONC Pierre 3; Ignace 1 ; 12 cattle, 6 sheep, 6 hogs, 11 arpents, 1 gun."
+1 CONT      After the 1686 census, Jacques settled his family in 
+1 CONC Riviere-aux-Vieux-Habitants in the Bassin des Mines. In 1730, when the 
+1 CONC British demanded that the Acadians swear an oath of allegiance to the 
+1 CONC British crown, Jacques and his sons were among those families which 
+1 CONC signed the document. This was the last document which mentions Jacques Le 
+1 CONC Blanc and it is assumed he died shortly thereafter. 
+0 @NI0503@ NOTE
+1 CONC Daniel was born in 1626 in Martaize,  departement de la Vienne, France. 
+1 CONC Daniel arrived in Acadia before 1650 with other French colonists and 
+1 CONC settled on the north side of  the Port Royal River, to the north-east of 
+1 CONC the Belisle march, about 9 miles from the fort, half a  mile from Saint- 
+1 CONC Laurent Chappel. At the age of 24, he wed a widow, Francoise Gaudet,  
+1 CONC daughter of Jean and Francoise-Marie (Daussy) Gaudet, (one of the oldest 
+1 CONC families of the young  colony), 1650 in Port Royal.  Daniel was one of 
+1 CONC the principle citizens of the area and on 24 May 1690, when Sir William  
+1 CONC Phipps ordered the inhabitants to select six from among them to form a 
+1 CONC council that would  ensure that peace and justice would prevail, Daniel 
+1 CONC was one of those selected.  According to a census in 1671, Port Royal, 
+1 CONC Daniel was listed as a laborer, aged 45 years, 7  children, 1 girl, 6 
+1 CONC boys. His wife was 48. Livestock totaled 18 cattle with horns and 26 
+1 CONC female  sheep. They worked on 10 acres of land that was located in two 
+1 CONC different places. They were  buried in the French cemetery at Port Royal 
+1 CONC (now Annapolis Royal, NS).  One relevant document dated 5 Oct 1687 
+1 CONC concerns a deposition made by Daniel. This concerns  work done in Acadia 
+1 CONC by the Sire of Aulnay before his death in 1650. Among those who signed,  
+1 CONC there was "the mark of" Daniel, he therefore arrived in Acadia before the 
+1 CONC death of Aulnay in  June 1650.  Daniel Le Blanc and Francoise Gaudet are 
+1 CONC the ancestors of one of the largest Acadian families in  the Maritime 
+1 CONC provinces. Neither the place of origin nor the parents of Daniel Le Blanc 
+1 CONC are  known.  It is likely that Daniel came to Acadia under contract to 
+1 CONC governor d' Aulnay. He became one of  the most successful farmers in 
+1 CONC Acadia during the 17th century. He settled along the banks of the  Port 
+1 CONC Royal river where his children were born between 1651 and 1664. Five sons 
+1 CONC married and  gave the couple 35 grandchildren. Daniel died 1695 at the 
+1 CONC age of 69.  Along with their Acadian compatriots, the Le Blancs would 
+1 CONC undergo the trials of the  Deportation. Most of the victims of the 
+1 CONC expulsions between 1755 and 1758 were exiled to  Anglo-American ports, in 
+1 CONC France, and in Quebec. Others managed to escape their enemies and  found 
+1 CONC refuge in the forests of present day New Brunswick. After a few years of 
+1 CONC resistance from  the forest, these fighters surrendered to the British 
+1 CONC authorities in 1763, at the end of the Seven  Years War.  Once freed from 
+1 CONC the forts, descendants of Daniel Le Blanc and of Francoise Gaudet settled 
+1 CONC in  different areas of the Maritime Provinces.
+1 CONT
+1 CONT Daniel was born in France abt 1626. He arrived in Acadia abt 1650, which 
+1 CONC is about the time he married Françoise daughter of Jean Gaudet and 
+1 CONC widower of someone whose family name was Mercier. Daniel and Françoise 
+1 CONC began the largest family to come out of Acadia. Five of their six sons 
+1 CONC married and filled their homes with children. Among them they had 
+1 CONC thirty-five sons. Thirty-one of them married. Consequently, the LeBlanc 
+1 CONC family grew rapidly and this explains its eventual predominance among the 
+1 CONC Acadians. 
+1 CONT
+1 CONT According to the census of 1671: Their plowed land was 10 arpents in two 
+1 CONC locations and included 18 horned animals and 26 sheep. The estate was on 
+1 CONC the Riviere Dauphin, now Annappolis River, about 22 miles north of Port 
+1 CONC Royal, now Annapolis.
+1 CONT
+1 CONT In Census of Acadia:  1671, in  "Acadian Census 1671-1752" translated by 
+1 CONC Charles C. Trahan, page 5;
+1 CONT    "Farmer--Daniel Leblanc age 45, his wife Francoise Gaudet age 48; 
+1 CONC their 7 children:  one married daughter Marie-Francoise 18, not 
+1 CONC marrried:  Jacque 20, Estienne 15, Rene 14, Andre 12, Anthoine 9, 
+1 CONC Pierre7; 18 cattle, 26 sheep, 10 arpents."
+1 CONT
+1 CONT In Census of Acadia: 1686, in  "Acadian Census 1671-1752" translated by 
+1 CONC Charles C. Trahan, page 13;
+1 CONT    "Daniel leBlanc 60, Francoise Godet 60; 2 guns, 6 arpents, 15 cattle, 
+1 CONC 20 sheep, 7 hogs."
+1 CONT
+1 CONT In Census of Acadia:  1693, A List of the Inhabitants of Port Royal and 
+1 CONC Their Cultivated Land, Their Livestock and Firearms, in "Acadian Census 
+1 CONC 1671-1752" translated by Charles C. Trahan, page 29;
+1 CONT    "Daniel leBlanc 66; Francois Godet his wife 76; Pierre their son 28; 
+1 CONC Pierre, son of Pierre, 7; Jean LaForet servant 15; Marguerite La 
+1 CONC Princesse 12; 20 cattle, 35 sheep, 9 hogs, 18 arpents, 3 guns."
+1 CONT
+1 CONT LeBlancs owe their all to Daniel - Canadian Press
+1 CONT (this article appeared in the Ottawa Citizen in Aug. 1994 after the 
+1 CONC Acadian renunion in New Brunswick. Velma, Dan, Germaine, Austin, Merille, 
+1 CONC and Reg, all attended the renunion.)
+1 CONT SHEDIAC. N.B. - The cherubic six-year-old looked up with clear blue eyes 
+1 CONC and started speaking in a pure British accent.  "My name is Michael but 
+1 CONC I've been telling everyone my name's Michel."     He had just arrived at 
+1 CONC the LeBlanc family renunion with his grandmother, Fabienne LeBlanc of 
+1 CONC London, England, but he had already captured the essence of the family 
+1 CONC homecoming.  No matter what part of the globe the estimated 4,000 
+1 CONC descendants of Daniel LeBlanc came from, they were truly one big, happy 
+1 CONC family.  Sporting ID tags that gave their names, hometowns and listed 
+1 CONC ancestors back eight generations to Daniel LeBlanc, LeBlancs and cousins 
+1 CONC who had changed their names to White came from England, the United States 
+1 CONC and Canada to celebrate known family ties and search for new ones.  The 
+1 CONC three-day LeBlanc family renunion was staged as part of the Acadian World 
+1 CONC Congress, where Acadain clans concluded a week of special masses, 
+1 CONC fiddling contests and family renunions.  A mass was celebrated by seven 
+1 CONC priests named LeBlanc and two named White.  Stephen White, genealogist at 
+1 CONC Moncton's Centre for Acadian Studies, spent much of his time at a local 
+1 CONC school helping people find missing branches of their family trees. "The 
+1 CONC whole idea of a family renunion is a sense of belonging and connection," 
+1 CONC said White, whose great-grandfather changed his name from LeBlanc after 
+1 CONC moving to Massachusetts in 1872.  White said almost anyone with Acadian 
+1 CONC ancestry will have a LeBlanc connection — there are more than 300,000 
+1 CONC LeBlancs in North America. Their renunion was the largest of 36 at the 
+1 CONC congress, which concluded Saturday (Aug 27, 1994).
+0 TRLR
