@@ -42,6 +42,7 @@ class Person():
         self._id = ref
         self._asSpouse = []  # use a list to handle multiple families
         self._asChild = None
+        self._events = [] # use a list to store multiple life events
                 
     def addName(self, names):
         # Extracts name parts from a list of names and stores them
@@ -86,11 +87,9 @@ class Person():
       
       # if person is part of a family, print out
       if(self._asChild):
-        #print(prefix, self.name())
-        # for each spouse in the family
         family = getFamily(self._asChild)
-        if(family):
-          nextPrefix = int(prefix, base = 10) + 1
+        if(family): # if 
+          nextPrefix = int(prefix) + 1
           s1 = getPerson(family._spouse1[0])
           s2 = getPerson(family._spouse2[0])
           if(s1):
@@ -98,9 +97,8 @@ class Person():
           if(s2):
             s2.printAncestors(str(nextPrefix))
         else:
-          print(prefix,self.name())   
-      #print("prefix = ",prefix)
-      spaces = (" " * int(prefix, base = 10))
+          print(prefix,self.name()) 
+      spaces = ("\t" * int(prefix))
       print(spaces,prefix,self.name())
       
   # ============================================================================
@@ -199,6 +197,18 @@ class Family():
 # end of class Family
 
 #-----------------------------------------------------------------------
+class Event():
+  def __init__(self):
+    self._date = ""
+    self._place = ""
+
+  # Constructs a single string that includes all info about the event
+  def __str__(self):
+    return self._date + self._place
+
+# end of class Event
+
+#-----------------------------------------------------------------------
 # Global dictionaries used by Person and Family to map INDI and FAM identifier
 # strings to corresponding object instances
 
@@ -253,6 +263,14 @@ def processGEDCOM(file):
             elif tag == 'FAMC':
                 newPerson.addIsChild(getPointer(line))
             ## add code here to look for other fields
+            # elif tag == 'BIRTH'
+              # get the DATE
+              # get the PLACE
+              # addEvent() for person 
+            # elif tag == 'DEATH'
+              # get the DATE
+              # get the PLACE
+              # addEvent() for person 
 
             # read to go to next line
             line = f.readline()
