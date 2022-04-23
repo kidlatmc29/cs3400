@@ -60,9 +60,16 @@ class Person():
         # is a child
         self._asChild = famRef
 
+    def addEvent(self, newEvent):
+      # creates a new Event and stores it into events lists
+      self._events.append(newEvent)
+
     def printDescendants(self, prefix=''):
         # print info for this person and then call method in Family
-        print(prefix + self.name())
+        eventsStr = '' 
+        for event in self._events:
+          eventsStr += str(event)
+        print(prefix + self.name() + " " + eventsStr)
         # recursion stops when self is not a spouse
         for fam in self._asSpouse:
             families[fam].printFamily(self._id,prefix)
@@ -176,7 +183,11 @@ class Family():
             if self._spouse1.personRef == firstSpouse:
                 secondSpouse = self._spouse2.personRef
             else: secondSpouse = self._spouse1.personRef
-            print(prefix+ '+' + persons[secondSpouse].name())
+            eventsStr = ""
+            # for every event a Person has
+            for event in persons[secondSpouse]._events:
+              eventsStr += str(event)
+            print(prefix+ '+' + persons[secondSpouse].name() + " " + eventsStr)
 
         # Make a recursive call for each child in this family
         for child in self._children:
@@ -202,9 +213,16 @@ class Event():
     self._date = ""
     self._place = ""
 
+  def addDate(self, newDate):
+    self._date = newDate
+
+  def addPlace(self, newPlace):
+    self._place = newPlace
+
   # Constructs a single string that includes all info about the event
   def __str__(self):
-    return self._date + self._place
+    eventParts = (self._date + " " + self._place)
+    return eventParts
 
 # end of class Event
 
@@ -263,14 +281,24 @@ def processGEDCOM(file):
             elif tag == 'FAMC':
                 newPerson.addIsChild(getPointer(line))
             ## add code here to look for other fields
-            # elif tag == 'BIRTH'
-              # get the DATE
-              # get the PLACE
-              # addEvent() for person 
-            # elif tag == 'DEATH'
-              # get the DATE
-              # get the PLACE
-              # addEvent() for person 
+           
+            elif tag == 'BIRT':  
+              #print("tag is =", tag)
+              line = f.readline()
+              newEvent = Event()
+              tag = line[2:6]
+              data = line[7:]
+              if(tag == 'DATE'): # check if the data is a date
+                newEvent.addDate("n: " + data.strip()) 
+                line = f.readline()
+                tag = line[2:6]
+                data = line[7:]
+                if(tag == 'PLAC'): # check if the data is a place
+                  newEvent.addPlace(data.strip())
+                elif(tag == 'PLAC'):
+                  newEvent.addPlace(data.strip())
+              #print("newEvent = ", newEvent)
+              newPerson.addEvent(newEvent)
 
             # read to go to next line
             line = f.readline()
