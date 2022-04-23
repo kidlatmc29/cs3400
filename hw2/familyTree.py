@@ -66,10 +66,7 @@ class Person():
 
     def printDescendants(self, prefix=''):
         # print info for this person and then call method in Family
-        eventsStr = ''
-        for event in self._events:
-          eventsStr += str(event)
-        print(prefix + self.name() + " " + eventsStr)
+        print(prefix + self.name() + " " + self.eventInfo())
         # recursion stops when self is not a spouse
         for fam in self._asSpouse:
             families[fam].printFamily(self._id,prefix)
@@ -137,7 +134,10 @@ class Person():
     
     def eventInfo(self):
         ## add code here to show information from events once they are recognized
-        return ''
+        eventsStr = ''
+        for event in self._events:
+          eventsStr += str(event)
+        return eventsStr
 
     def __str__(self):
         # Returns a string representing all info in a Person instance
