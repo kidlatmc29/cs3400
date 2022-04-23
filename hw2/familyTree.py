@@ -107,8 +107,55 @@ class Person():
       #print("prefix = ",prefix)
       spaces = ("  " * int(prefix, base = 10))
       print(spaces,prefix,self.name(),self.eventInfo())
-      
   # ============================================================================
+    def printCousins(self,n=1):
+      print("First cousins of", self.name())
+
+      # first cousins are your parent's sibling's children
+      # NOT including yourself and siblings
+      if(self._asChild):
+        parents = []
+        auncles = [] # list of lists of siblings
+        cousins = []
+
+        # get parents
+        parents  = self.getParents()
+        # for debugging
+        # for parent in parents:
+        #   print(str(parent))
+        
+        # get parent siblings
+        for parent in parents:
+          auncles.append(parent.getSiblings())
+
+      else:
+        print("No cousins.")
+
+      # helper functions
+      # getParents
+      # getChildren
+      # getSiblings
+    
+    def getParents(self):
+      # returns a list of Persons that are parents of self
+      parents = []
+      if(self._asChild):
+        family = getFamily(self._asChild)
+        parent1 = getPerson(family._spouse1[0])
+        parent2 = getPerson(family._spouse2[0])
+        if(parent1):
+          parents.append(parent1)
+          if(parent2):
+            parents.append(parent2)
+        else:
+          parents.append(parent2)
+      return parents
+    
+    def getSiblings(self):
+      siblings = []
+      return siblings
+
+    
     def name (self):
         # returns a simple name string 
         return self._given + ' ' + self._surname.upper()\
