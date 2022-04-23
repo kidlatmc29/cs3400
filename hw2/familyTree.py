@@ -190,7 +190,11 @@ class Family():
             if self._spouse1.personRef == firstSpouse:
                 secondSpouse = self._spouse2.personRef
             else: secondSpouse = self._spouse1.personRef
-            print(prefix+ '+' + persons[secondSpouse].name())
+           
+            marriageEvents = ''
+            for event in self._events:
+              marriageEvents += " | " + str(event)
+            print(prefix+ '+' + persons[secondSpouse].name() + marriageEvents)
 
         # Make a recursive call for each child in this family
         for child in self._children:
