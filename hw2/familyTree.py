@@ -157,6 +157,7 @@ class Family():
         self._spouse1 = None
         self._spouse2 = None
         self._children = []
+        self._events = []
 
     def addSpouse(self, personRef, tag):
         # Stores the string (personRef) indicating a spouse in this family
@@ -168,6 +169,9 @@ class Family():
     def addChild(self, personRef):
         # Adds the string (personRef) indicating a new child to the list
         self._children.append(personRef)
+    
+    def addEvent(self, newEvent):
+      self._events.append(newEvent)
 
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse
@@ -183,10 +187,18 @@ class Family():
             if self._spouse1.personRef == firstSpouse:
                 secondSpouse = self._spouse2.personRef
             else: secondSpouse = self._spouse1.personRef
-            eventsStr = ""
+           
+            personEvents = ""
             # for every event a Person has
             for event in persons[secondSpouse]._events:
-              eventsStr += str(event)
+              personEvents += str(event)
+            
+            familyEvents = ""
+            # for every event in a family
+            for famEvent in self._events:
+              familyEvents += str(famEvent)
+
+            eventsStr = personEvents + familyEvents
             print(prefix+ '+' + persons[secondSpouse].name() + " " + eventsStr)
 
         # Make a recursive call for each child in this family
@@ -332,7 +344,23 @@ def processGEDCOM(file):
             elif tag == 'CHIL':
                 newFamily.addChild(getPointer(line))
             ## add code here to look for other fields 
-
+            elif tag == 'MARR':
+              line = f.readline()
+              newEvent = Event()
+              tag = line[2:6]
+              data = line[7:]
+              if(tag == "DATE"):
+                newEvent.addDate("m: " + data.strip())
+                line = f.readline()
+                tag = line[2:6]
+                if(tag == 'PLAC'): # check if the data is a place
+                  data = line[7:]
+                  newEvent.addPlace(data.strip())
+              elif(tag == "PLAC"):
+                newEvent.addPlace(data.strip())
+              #print(str(newEvent))
+              newFamily.addEvent(newEvent)
+              
             # read to go to next line
             line = f.readline()
 
