@@ -43,7 +43,7 @@ class Person():
         self._asSpouse = []  # use a list to handle multiple families
         self._asChild = None
         self._events = [] # use a list to store multiple life events
-                
+
     def addName(self, names):
         # Extracts name parts from a list of names and stores them
         self._given = names[0]
@@ -66,7 +66,7 @@ class Person():
 
     def printDescendants(self, prefix=''):
         # print info for this person and then call method in Family
-        eventsStr = '' 
+        eventsStr = ''
         for event in self._events:
           eventsStr += str(event)
         print(prefix + self.name() + " " + eventsStr)
@@ -94,9 +94,11 @@ class Person():
       
       # if person is part of a family, print out
       if(self._asChild):
+        #print(prefix, self.name())
+        # for each spouse in the family
         family = getFamily(self._asChild)
-        if(family): # if 
-          nextPrefix = int(prefix) + 1
+        if(family):
+          nextPrefix = int(prefix, base = 10) + 1
           s1 = getPerson(family._spouse1[0])
           s2 = getPerson(family._spouse2[0])
           if(s1):
@@ -104,73 +106,12 @@ class Person():
           if(s2):
             s2.printAncestors(str(nextPrefix))
         else:
-          print(prefix,self.name()) 
-      spaces = ("\t" * int(prefix))
+          print(prefix,self.name())   
+      #print("prefix = ",prefix)
+      spaces = (" " * int(prefix, base = 10))
       print(spaces,prefix,self.name())
       
   # ============================================================================
-    def printCousins(self, n=1):
-      print("First cousins of", self.name())
-       # your first cousins are your parents' siblings' children
-      parents = self.getParents()
-      parentsSibs = []
-      if(parents):
-        # for each parent, get their siblings
-          for parent in parents:
-            #print("getting parents siblings")
-            tempSibs = parent.getSiblings()
-            for pSib in tempSibs:
-              parentsSibs.append(pSib)
-          
-          # for each parent sibling, get their children
-          print("number of parent sibs =", len(parentsSibs))
-          if(len(parentsSibs) > 0):
-            for sibling in parentsSibs:
-              currentChildren = sibling.getChildren()
-              for child in currentChildren:
-                print(child.name())
-         
-      else:
-        print("No cousins.")
-      
-  # ============================================================================S
-  
-    def getParents(self):
-      # returns a list of Persons that are the parents of self
-      parents = []
-      if(self._asChild):
-        family = getFamily(self._asChild)
-        if(family._spouse1):
-          parent1 = getPerson(family._spouse1[0])
-          parents.append(parent1)
-          if(family._spouse2):
-            parent2 = getPerson(family._spouse2[0])
-            parents.append(parent2)
-      return parents
-    
-    def getChildren(self):
-      # returns a list of Persons that are children of self
-      
-      children = []
-      if(self._asSpouse):
-       for fam in self._asSpouse:
-        for childRef in families[fam]._children:
-          child = getPerson(childRef)
-          children.append(child)
-
-      return children
-
-    def getSiblings(self):
-      # returns a list of Persons that are the siblings of self
-      sibs = []
-      if(self._asChild):
-        fam = getFamily(self._asChild)
-        for childRef in fam._children: # for each childRef in the family
-          child = getPerson(childRef)
-          if(child._id != self._id): # if the child is not itself
-            sibs.append(child)
-      return sibs
-  
     def name (self):
         # returns a simple name string 
         return self._given + ' ' + self._surname.upper()\
@@ -219,7 +160,6 @@ class Family():
         self._spouse1 = None
         self._spouse2 = None
         self._children = []
-        self._events = []
 
     def addSpouse(self, personRef, tag):
         # Stores the string (personRef) indicating a spouse in this family
@@ -231,9 +171,6 @@ class Family():
     def addChild(self, personRef):
         # Adds the string (personRef) indicating a new child to the list
         self._children.append(personRef)
-    
-    def addEvent(self, newEvent):
-      self._events.append(newEvent)
 
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse
@@ -249,19 +186,7 @@ class Family():
             if self._spouse1.personRef == firstSpouse:
                 secondSpouse = self._spouse2.personRef
             else: secondSpouse = self._spouse1.personRef
-           
-            personEvents = ""
-            # for every event a Person has
-            for event in persons[secondSpouse]._events:
-              personEvents += str(event)
-            
-            familyEvents = ""
-            # for every event in a family
-            for famEvent in self._events:
-              familyEvents += str(famEvent)
-
-            eventsStr = personEvents + familyEvents
-            print(prefix+ '+' + persons[secondSpouse].name() + " " + eventsStr)
+            print(prefix+ '+' + persons[secondSpouse].name())
 
         # Make a recursive call for each child in this family
         for child in self._children:
@@ -355,15 +280,15 @@ def processGEDCOM(file):
             elif tag == 'FAMC':
                 newPerson.addIsChild(getPointer(line))
             ## add code here to look for other fields
-           
-            elif tag == 'BIRT':  
+
+            elif tag == 'BIRT':
               #print("tag is =", tag)
               line = f.readline()
               newEvent = Event()
               tag = line[2:6]
               data = line[7:]
               if(tag == 'DATE'): # check if the data is a date
-                newEvent.addDate("n: " + data.strip()) 
+                newEvent.addDate("n: " + data.strip())
                 line = f.readline()
                 tag = line[2:6]
                 data = line[7:]
@@ -373,14 +298,14 @@ def processGEDCOM(file):
                   newEvent.addPlace(data.strip())
               #print("newEvent = ", newEvent)
               newPerson.addEvent(newEvent)
-            elif tag == 'DEAT':  
+            elif tag == 'DEAT':
               #print("tag is =", tag)
               line = f.readline()
               newEvent = Event()
               tag = line[2:6]
               data = line[7:]
               if(tag == 'DATE'): # check if the data is a date
-                newEvent.addDate("d: " + data.strip()) 
+                newEvent.addDate("d: " + data.strip())
                 line = f.readline()
                 tag = line[2:6]
                 data = line[7:]
@@ -406,23 +331,7 @@ def processGEDCOM(file):
             elif tag == 'CHIL':
                 newFamily.addChild(getPointer(line))
             ## add code here to look for other fields 
-            elif tag == 'MARR':
-              line = f.readline()
-              newEvent = Event()
-              tag = line[2:6]
-              data = line[7:]
-              if(tag == "DATE"):
-                newEvent.addDate("m: " + data.strip())
-                line = f.readline()
-                tag = line[2:6]
-                if(tag == 'PLAC'): # check if the data is a place
-                  data = line[7:]
-                  newEvent.addPlace(data.strip())
-              elif(tag == "PLAC"):
-                newEvent.addPlace(data.strip())
-              #print(str(newEvent))
-              newFamily.addEvent(newEvent)
-              
+
             # read to go to next line
             line = f.readline()
 
