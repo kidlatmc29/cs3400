@@ -109,6 +109,63 @@ class Person():
       print(spaces,prefix,self.name())
       
   # ============================================================================
+    def printCousins(self, n=1):
+      #print("in printCousins")
+       # parents' siblings' children
+      parents = self.getParents()
+      parentsSibs = []
+
+    # for each parent, get their siblings
+      for parent in parents:
+        print("getting parents siblings")
+        tempSibs = parent.getSiblings()
+        for pSib in tempSibs:
+          parentsSibs.append(pSib)
+      
+       # for each parent sibling, get their children
+      for sibling in parentsSibs:
+        currentChildren = sibling.getChildren()
+        for child in currentChildren:
+          print(child.name())
+      
+  # ============================================================================S
+  
+    def getParents(self):
+      # returns a list of Persons that are the parents of self
+      parents = []
+      if(self._asChild):
+        family = getFamily(self._asChild)
+        if(family._spouse1):
+          parent1 = getPerson(family._spouse1[0])
+          parents.append(parent1)
+          if(family._spouse2):
+            parent2 = getPerson(family._spouse2[0])
+            parents.append(parent2)
+      return parents
+    
+    def getChildren(self):
+      # returns a list of Persons that are children of self
+      
+      children = []
+      if(self._asSpouse):
+        family = getFamily(self._asSpouse)
+        for childRef in family._children:
+          child = getPerson(childRef)
+          children.append(child)
+          
+      return children
+
+    def getSiblings(self):
+      # returns a list of Persons that are the siblings of self
+      sibs = []
+      if(self._asChild):
+        fam = getFamily(self._asChild)
+        for childRef in fam._children: # for each childRef in the family
+          child = getPerson(childRef)
+          if(child._id != self._id): # if the child is not itself
+            sibs.append(child)
+      return sibs
+  
     def name (self):
         # returns a simple name string 
         return self._given + ' ' + self._surname.upper()\
