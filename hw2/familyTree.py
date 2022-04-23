@@ -66,7 +66,7 @@ class Person():
 
     def printDescendants(self, prefix=''):
         # print info for this person and then call method in Family
-        print(prefix + self.name() + " " + self.eventInfo())
+        print(prefix + self.name() + self.eventInfo())
         # recursion stops when self is not a spouse
         for fam in self._asSpouse:
             families[fam].printFamily(self._id,prefix)
@@ -174,7 +174,7 @@ class Family():
         self._children.append(personRef)
     
     def addEvent(self, newEvent):
-      self._events.append()
+      self._events.append(newEvent)
 
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse
@@ -337,11 +337,10 @@ def processGEDCOM(file):
             ## add code here to look for other fields 
             elif tag == 'MARR':
               line = f.readline()
+              newEvent = Event()
               tag = line[2:6]
               if(tag == "DATE"):
-                newEvent = Event()
                 newEvent.addDate("m: " + line[7:].strip())
-                line = f.readline()
                 tag = line[2:6]
                 if(tag == "PLAC"):
                   newEvent.addPlace(line[7:].strip())
@@ -349,9 +348,7 @@ def processGEDCOM(file):
                 # print("newEvent =",str(newEvent))
               elif(tag == "PLAC"):
                 newEvent.addPlace(line[7:].strip())
-                print("newEvent =",str(newEvent))
-
-
+              newFamily.addEvent(newEvent)
             # read to go to next line
             line = f.readline()
 
