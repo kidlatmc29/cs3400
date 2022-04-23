@@ -106,10 +106,16 @@ class Person():
           if(s2):
             s2.printAncestors(str(nextPrefix))
         else:
-          print(prefix,self.name())   
+          eventsStr = ''
+          for event in self._events:
+            eventsStr += str(event)
+          print(prefix,self.name() + eventsStr)   
       #print("prefix = ",prefix)
+      eventsStr = ''
+      for event in self._events:
+        eventsStr += str(event)
       spaces = (" " * int(prefix, base = 10))
-      print(spaces,prefix,self.name())
+      print(spaces,prefix,self.name(),eventsStr)
       
   # ============================================================================
     def name (self):
