@@ -110,23 +110,28 @@ class Person():
       
   # ============================================================================
     def printCousins(self, n=1):
-      #print("in printCousins")
+      print("First cousins of", self.name())
        # parents' siblings' children
       parents = self.getParents()
       parentsSibs = []
-
-    # for each parent, get their siblings
-      for parent in parents:
-        print("getting parents siblings")
-        tempSibs = parent.getSiblings()
-        for pSib in tempSibs:
-          parentsSibs.append(pSib)
-      
-       # for each parent sibling, get their children
-      for sibling in parentsSibs:
-        currentChildren = sibling.getChildren()
-        for child in currentChildren:
-          print(child.name())
+      if(parents):
+        # for each parent, get their siblings
+          for parent in parents:
+            #print("getting parents siblings")
+            tempSibs = parent.getSiblings()
+            for pSib in tempSibs:
+              parentsSibs.append(pSib)
+          
+          # for each parent sibling, get their children
+          print("number of parent sibs =", len(parentsSibs))
+          if(len(parentsSibs) > 0):
+            for sibling in parentsSibs:
+              currentChildren = sibling.getChildren()
+              for child in currentChildren:
+                print(child.name())
+         
+      else:
+        print("No cousins.")
       
   # ============================================================================S
   
@@ -148,11 +153,11 @@ class Person():
       
       children = []
       if(self._asSpouse):
-        family = getFamily(self._asSpouse)
-        for childRef in family._children:
+       for fam in self._asSpouse:
+        for childRef in families[fam]._children:
           child = getPerson(childRef)
           children.append(child)
-          
+
       return children
 
     def getSiblings(self):
