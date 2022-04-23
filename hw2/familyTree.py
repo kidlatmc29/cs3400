@@ -221,7 +221,7 @@ class Event():
 
   # Constructs a single string that includes all info about the event
   def __str__(self):
-    eventParts = (self._date + " " + self._place)
+    eventParts = (self._date + " " + self._place + " ")
     return eventParts
 
 # end of class Event
@@ -290,6 +290,23 @@ def processGEDCOM(file):
               data = line[7:]
               if(tag == 'DATE'): # check if the data is a date
                 newEvent.addDate("n: " + data.strip()) 
+                line = f.readline()
+                tag = line[2:6]
+                data = line[7:]
+                if(tag == 'PLAC'): # check if the data is a place
+                  newEvent.addPlace(data.strip())
+                elif(tag == 'PLAC'):
+                  newEvent.addPlace(data.strip())
+              #print("newEvent = ", newEvent)
+              newPerson.addEvent(newEvent)
+            elif tag == 'DEAT':  
+              #print("tag is =", tag)
+              line = f.readline()
+              newEvent = Event()
+              tag = line[2:6]
+              data = line[7:]
+              if(tag == 'DATE'): # check if the data is a date
+                newEvent.addDate("d: " + data.strip()) 
                 line = f.readline()
                 tag = line[2:6]
                 data = line[7:]
