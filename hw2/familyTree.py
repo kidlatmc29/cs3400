@@ -335,7 +335,8 @@ def processGEDCOM(file):
             elif tag == 'CHIL':
                 newFamily.addChild(getPointer(line))
             ## add code here to look for other fields 
-
+            elif tag == 'MARR':
+              print("marrage tag")
             # read to go to next line
             line = f.readline()
 
