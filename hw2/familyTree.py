@@ -111,7 +111,7 @@ class Person():
   # ============================================================================
     def printCousins(self, n=1):
       print("First cousins of", self.name())
-       # parents' siblings' children
+       # your first cousins are your parents' siblings' children
       parents = self.getParents()
       parentsSibs = []
       if(parents):
