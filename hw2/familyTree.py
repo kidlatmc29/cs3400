@@ -160,6 +160,7 @@ class Family():
         self._spouse1 = None
         self._spouse2 = None
         self._children = []
+        self._events = []
 
     def addSpouse(self, personRef, tag):
         # Stores the string (personRef) indicating a spouse in this family
@@ -171,6 +172,9 @@ class Family():
     def addChild(self, personRef):
         # Adds the string (personRef) indicating a new child to the list
         self._children.append(personRef)
+    
+    def addEvent(self, newEvent):
+      self._events.append()
 
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse
