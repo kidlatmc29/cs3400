@@ -130,7 +130,7 @@ class Person():
         ## add code here to show information from events once they are recognized
         eventsStr = ''
         for event in self._events:
-          eventsStr += str(event)
+          eventsStr += (" | " + str(event))
         return eventsStr
 
     def __str__(self):
