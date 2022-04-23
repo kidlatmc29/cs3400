@@ -116,7 +116,7 @@ class Person():
       if(self._asChild):
         parents = []
         auncles = [] # list of lists of siblings
-        cousins = []
+        cousins = [] # a list of lists of children
 
         # get parents
         parents  = self.getParents()
@@ -127,7 +127,20 @@ class Person():
         # get parent siblings
         for parent in parents:
           auncles.append(parent.getSiblings())
+        
+        # print(auncles)
+        # get parents sibling children
+        for sibList in auncles:
+          for sibling in sibList:
+            cousins.append(sibling.getChildren())
 
+        if (len(cousins) > 0):
+          for cousinList in cousins:
+            for cousin in cousinList:
+              print(cousin.name())
+        else:
+          print("No cousins.")
+      
       else:
         print("No cousins.")
 
@@ -153,9 +166,23 @@ class Person():
     
     def getSiblings(self):
       siblings = []
+      if(self._asChild):
+        family = getFamily(self._asChild)
+        for childRef in family._children:
+          child = getPerson(childRef)
+          if(child._id != self._id):
+            siblings.append(child)
       return siblings
 
-    
+    def getChildren(self):
+      children = []
+      if(self._asSpouse):
+        for famRef in self._asSpouse: # for every family self is a spouse
+          family = getFamily(famRef)
+          for childRef in family._children:
+            children.append(getPerson(childRef))
+      return children
+
     def name (self):
         # returns a simple name string 
         return self._given + ' ' + self._surname.upper()\
