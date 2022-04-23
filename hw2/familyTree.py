@@ -105,7 +105,7 @@ class Person():
         else:
           print(prefix,self.name(), self.eventInfo())   
       #print("prefix = ",prefix)
-      spaces = (" " * int(prefix, base = 10))
+      spaces = ("  " * int(prefix, base = 10))
       print(spaces,prefix,self.name(),self.eventInfo())
       
   # ============================================================================
