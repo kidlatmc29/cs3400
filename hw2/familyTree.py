@@ -336,12 +336,19 @@ def processGEDCOM(file):
                 newFamily.addChild(getPointer(line))
             ## add code here to look for other fields 
             elif tag == 'MARR':
-              print("marriage tag")
               line = f.readline()
               tag = line[2:6]
-              newEvent = Event()
               if(tag == "DATE"):
+                newEvent = Event()
                 newEvent.addDate("m: " + line[7:].strip())
+                line = f.readline()
+                tag = line[2:6]
+                if(tag == "PLAC"):
+                  newEvent.addPlace(line[7:].strip())
+                # for debugging marriage events
+                # print("newEvent =",str(newEvent))
+              elif(tag == "PLAC"):
+                newEvent.addPlace(line[7:].strip())
                 print("newEvent =",str(newEvent))
 
 
