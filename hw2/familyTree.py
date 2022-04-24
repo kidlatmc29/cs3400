@@ -1,3 +1,17 @@
+# Isabel Ovalles
+# CPSC 3400
+# hw2
+# All of the code you turn in must have been written by you without immediate 
+# reference to another solution to the problem you are solving.  That means that you can look at 
+# other programs to see how someone solved a similar problem, but you shouldn't have any code 
+# written by someone else visible when you write yours (and you shouldn't have looked at a 
+# solution just a few seconds before you type!).  You should compose the code you write based on 
+# your understanding of how the features of the language you are using can be used to implement 
+# the algorithm you have chosen to solve the problem you are addressing.  Doing it this way is 
+# "real programming" - in contrast to just trying to get something to work by cutting and pasting 
+# stuff you don't actually understand.  It is the only way to achieve the learning objectives of the 
+# course. 
+
 """
 GEDCOM parser design
 
