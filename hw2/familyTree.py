@@ -144,7 +144,7 @@ class Person():
           for cousinList in cousins:
             if(cousinList):
               for cousin in cousinList:
-                print(cousin.name())
+                print(cousin.name(), cousin.eventInfo())
                 noCousins = False
         if noCousins:
           print("3 No cousins.") 
