@@ -139,34 +139,35 @@ class Person():
         # get parent siblings
         if(parents) :
           for parent in parents:
-            auncles.append(parent.getSiblings())
+            auncles += parent.getSiblings()
         else:
           print("No cousins.")
           return
         
         # get parents sibling children
-        foundCousins = False
+        #foundCousins = False
         if(auncles) :
-          for sibList in auncles:
-            if(sibList):
-              for sibling in sibList:
-                cousins.append(sibling.getChildren())
-                foundCousins = True
-        if not(foundCousins): # if ALL parents' siblings' have NO children
+            for sibling in auncles:
+              cousins += sibling.getChildren()
+              #cousins.append(sibling.getChildren())
+              #foundCousins = True
+        #if not(foundCousins): # if ALL parents' siblings' have NO children
+        else: 
           print("No cousins.")
           return
 
-        noCousins = True
+        #noCousins = True
         if (cousins):
-          for cousinList in cousins:
-            if(cousinList): # if there are cousins in cousinList
-              for cousin in cousinList:
-                print(cousin.name(), cousin.eventInfo())
-                noCousins = False
-        if noCousins: # if there were NO cousins in cousinList
+          for cousin in cousins:
+            #if(cousinList): # if there are cousins in cousinList
+             # for cousin in cousinList:
+            print(cousin.name(), cousin.eventInfo())
+                #noCousins = False
+        #if noCousins: # if there were NO cousins in cousinList
+        else:
           print("No cousins.") 
           return
-      
+  
       else:
         print("No cousins.")
     
@@ -198,7 +199,8 @@ class Person():
     def getChildren(self):
       children = []
       if(self._asSpouse):
-        for famRef in self._asSpouse: # for every family self is a spouse
+        # for every family self is a spouse
+        for famRef in self._asSpouse: 
           family = getFamily(famRef)
           for childRef in family._children:
             children.append(getPerson(childRef))
