@@ -111,8 +111,6 @@ class Person():
     def printCousins(self,n=1):
       print("First cousins of", self.name())
 
-      # first cousins are your parent's sibling's children
-      # NOT including yourself and siblings
       if(self._asChild):
         parents = []
         auncles = [] # list of lists of siblings
@@ -120,29 +118,38 @@ class Person():
 
         # get parents
         parents  = self.getParents()
-        # for debugging
-        # for parent in parents:
-        #   print(str(parent))
         
         # get parent siblings
-        for parent in parents:
-          auncles.append(parent.getSiblings())
+        if(parents) :
+          for parent in parents:
+            auncles.append(parent.getSiblings())
+        else:
+          print("1 No cousins.")
+          return
         
         # print(auncles)
         # get parents sibling children
-        for sibList in auncles:
-          for sibling in sibList:
-            cousins.append(sibling.getChildren())
-
-        if (len(cousins) > 0):
+        foundCousins = False
+        if(auncles) :
+          for sibList in auncles:
+            if(sibList):
+              for sibling in sibList:
+                cousins.append(sibling.getChildren())
+                foundCousins = True
+        if not(foundCousins):
+          print("2 No cousins.")
+          return
+        noCousins = True
+        if (cousins):
           for cousinList in cousins:
-            for cousin in cousinList:
-              print(cousin.name())
-        else:
-          print("No cousins.")
-      
+            if(cousinList):
+              for cousin in cousinList:
+                print(cousin.name())
+                noCousins = False
+        if noCousins:
+          print("3 No cousins.") 
       else:
-        print("No cousins.")
+        print("4 No cousins.")
 
       # helper functions
       # getParents
