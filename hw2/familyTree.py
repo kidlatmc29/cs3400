@@ -85,8 +85,8 @@ class Person():
         for fam in self._asSpouse:
             families[fam].printFamily(self._id,prefix)
 
-  # ============================================================================
     def isDescendant(self, personId):
+      # returns a bool true if the person given is a descendant of self
       if self._id == personId: # check self id against personId
        return True
 
@@ -98,8 +98,9 @@ class Person():
           # OR self is not a spouse 
 
       return False
-  # ============================================================================
+
     def printAncestors(self,prefix=''):
+      # prints out the ancestors of self using a tree algo
       if(prefix == ""):
         prefix = '0'
       
@@ -118,10 +119,10 @@ class Person():
             s2.printAncestors(str(nextPrefix))
         else:
           print(prefix,self.name(), self.eventInfo())   
-      #print("prefix = ",prefix)
+   
       spaces = ("  " * int(prefix, base = 10))
       print(spaces,prefix,self.name(),self.eventInfo())
-  # ============================================================================
+
     def printCousins(self,n=1):
       # prints out the FIRST COUSINS of self
       # does not work for nth cousins
