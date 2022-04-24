@@ -124,7 +124,7 @@ class Person():
           for parent in parents:
             auncles.append(parent.getSiblings())
         else:
-          print("1 No cousins.")
+          print("No cousins.")
           return
         
         # print(auncles)
@@ -137,8 +137,9 @@ class Person():
                 cousins.append(sibling.getChildren())
                 foundCousins = True
         if not(foundCousins):
-          print("2 No cousins.")
+          print("No cousins.")
           return
+
         noCousins = True
         if (cousins):
           for cousinList in cousins:
@@ -147,14 +148,10 @@ class Person():
                 print(cousin.name(), cousin.eventInfo())
                 noCousins = False
         if noCousins:
-          print("3 No cousins.") 
+          print("No cousins.") 
+          return
       else:
-        print("4 No cousins.")
-
-      # helper functions
-      # getParents
-      # getChildren
-      # getSiblings
+        print("No cousins.")
     
     def getParents(self):
       # returns a list of Persons that are parents of self
