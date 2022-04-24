@@ -109,6 +109,8 @@ class Person():
       print(spaces,prefix,self.name(),self.eventInfo())
   # ============================================================================
     def printCousins(self,n=1):
+      # prints out the FIRST COUSINS of self
+      # does not work for nth cousins
       print("First cousins of", self.name())
 
       if(self._asChild):
@@ -127,7 +129,6 @@ class Person():
           print("No cousins.")
           return
         
-        # print(auncles)
         # get parents sibling children
         foundCousins = False
         if(auncles) :
@@ -136,20 +137,21 @@ class Person():
               for sibling in sibList:
                 cousins.append(sibling.getChildren())
                 foundCousins = True
-        if not(foundCousins):
+        if not(foundCousins): # if ALL parents' siblings' have NO children
           print("No cousins.")
           return
 
         noCousins = True
         if (cousins):
           for cousinList in cousins:
-            if(cousinList):
+            if(cousinList): # if there are cousins in cousinList
               for cousin in cousinList:
                 print(cousin.name(), cousin.eventInfo())
                 noCousins = False
-        if noCousins:
+        if noCousins: # if there were NO cousins in cousinList
           print("No cousins.") 
           return
+      
       else:
         print("No cousins.")
     
