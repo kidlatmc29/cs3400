@@ -130,8 +130,8 @@ class Person():
 
       if(self._asChild):
         parents = []
-        auncles = [] # list of lists of siblings
-        cousins = [] # a list of lists of children
+        auncles = [] # list of parents siblings
+        cousins = [] # a list of parents siblings children
 
         # get parents
         parents  = self.getParents()
@@ -142,32 +142,20 @@ class Person():
             auncles += parent.getSiblings()
         else:
           print("No cousins.")
-          return
-        
+    
         # get parents sibling children
-        #foundCousins = False
         if(auncles) :
             for sibling in auncles:
               cousins += sibling.getChildren()
-              #cousins.append(sibling.getChildren())
-              #foundCousins = True
-        #if not(foundCousins): # if ALL parents' siblings' have NO children
         else: 
           print("No cousins.")
-          return
-
-        #noCousins = True
+          
+        # if there is cousins, print them out
         if (cousins):
           for cousin in cousins:
-            #if(cousinList): # if there are cousins in cousinList
-             # for cousin in cousinList:
             print(cousin.name(), cousin.eventInfo())
-                #noCousins = False
-        #if noCousins: # if there were NO cousins in cousinList
         else:
           print("No cousins.") 
-          return
-  
       else:
         print("No cousins.")
     
