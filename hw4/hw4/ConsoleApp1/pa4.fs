@@ -32,8 +32,19 @@ let getMax list =
 /// maxCubeVolume
 /// params: list of tuples containing three floats
 /// return: a float of the greatest volume
- let rec maxCubeVolume list =
+let rec maxCubeVolume list =
     if list = []
         then 0.0
     else 
         getMax (volumeList list)
+
+/// findMatches
+/// params: string and a list of tuples. tuple consist of a string and int
+/// return: a list of integers based on the matched string with the first 
+///         argument of the tuple
+let rec findMatches value = function
+| [] -> []
+| head::tail -> if value = fst(head)
+                    then List.sort (snd(head)::findMatches value tail)
+                    else findMatches value tail
+
