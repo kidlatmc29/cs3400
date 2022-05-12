@@ -58,6 +58,10 @@ let rec findMatches value = function
                         then List.sort (snd(head)::findMatches value tail)
                     else findMatches value tail
 
+let elimDuplicates list = 
+   
+
+
 // Tree definition for problem 3
 type BST =
     | Empty
