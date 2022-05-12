@@ -12,7 +12,6 @@
 /// stuff you don't actually understand.  It is the only way to achieve the learning objectives of the 
 /// course. 
 
-
 /// findFirstInt
 /// params: list of tuples representing var bindings and expression as a str
 /// returns: the integer bound to the var 
@@ -22,47 +21,28 @@ let rec findFirstInt varName = function
     | head::tail -> findFirstInt varName tail
 
 /// eval
-/// params: a list of tuples, matching a variable name to an int; an str representing an equation in postfix notation
-/// returns: the result of the postfix equation
+/// params: a list of tuples (string * int), an str representing an equation in postfix notation
+/// returns: a int list with only one element as the result
 let eval vars (expr:string) =  
-    let strSeq = Seq.toList expr |> Seq.map(fun x -> string x)
-    let strList = Seq.toList strSeq
+    let strSeq = Seq.toList expr |> Seq.map(fun x -> string x)  // takes string and turn it into a seq of strings
+    let strList = Seq.toList strSeq                             // turns seq of str into a list of strings
     
     let rec innerEval vars stack strList = 
-        printfn "stack = %A" stack
         match strList with
         | [] -> stack
-        | head::tail when head = "+" -> let num1::num2::rest = stack // "pushes" of stack
-                                        innerEval vars ((num1+num2)::rest) tail
+        | head::tail when head = "+" -> let num1::num2::rest = stack            // "pop" off stack
+                                        innerEval vars ((num1+num2)::rest) tail //"pushing" on stack
         | head::tail when head = "-" -> let num1::num2::rest = stack
-                                        innerEval vars ((num1-num2)::rest) tail
+                                        innerEval vars ((num2-num1)::rest) tail
         | head::tail when head = "*" -> let num1::num2::rest = stack
                                         innerEval vars ((num1*num2)::rest) tail
         | head::tail when head = "/" -> let num1::num2::rest = stack
-                                        innerEval vars ((num1/num2)::rest) tail
+                                        innerEval vars ((num2/num1)::rest) tail
+        | head::tail when head = "$" -> let num1::num2::rest = stack
+                                        innerEval vars (num2::num1::rest) tail
+        | head::tail when head = "@" -> let char1::char2::restOfChars = strList
+                                        let newInt::rest = stack
+                                        innerEval ((char2, newInt)::vars) rest restOfChars
+        | head::tail when head = " " -> innerEval vars stack tail
         | head::tail -> innerEval vars ((findFirstInt head vars)::stack) tail
     innerEval vars [] strList
-
-
-let eval2 vars (expr:string) = 
-    let rec innerEval vars stack (expr:string) = 
-       match expr.[0] with
-       | '+' -> let num1::num2::rest = stack 
-                innerEval vars ((num1+num2)::rest) expr.[1..]
-       | '' -> stack
-       | _ -> innerEval vars ((findFirstInt expr.[0] vars)::stack) expr.[1..]
-    innerEval vars [] expr
-
-    //innerEval vars [] expr
-  
-///let pop stack =
-///    match stack with
-///   | head::tail -> let newStack = tail
-///                   (head, newStack)
-
-///let countElements list =
-///       let rec loop count list =
- ///          match list with
- ///          | [] -> 0
-  ///         | head::tail -> loop (1+count) tail
-    ///   loop 0 list
