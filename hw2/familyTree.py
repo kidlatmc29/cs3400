@@ -1,3 +1,17 @@
+# Isabel Ovalles
+# CPSC 3400
+# hw2
+# All of the code you turn in must have been written by you without immediate 
+# reference to another solution to the problem you are solving.  That means that you can look at 
+# other programs to see how someone solved a similar problem, but you shouldn't have any code 
+# written by someone else visible when you write yours (and you shouldn't have looked at a 
+# solution just a few seconds before you type!).  You should compose the code you write based on 
+# your understanding of how the features of the language you are using can be used to implement 
+# the algorithm you have chosen to solve the problem you are addressing.  Doing it this way is 
+# "real programming" - in contrast to just trying to get something to work by cutting and pasting 
+# stuff you don't actually understand.  It is the only way to achieve the learning objectives of the 
+# course. 
+
 """
 GEDCOM parser design
 
@@ -42,7 +56,8 @@ class Person():
         self._id = ref
         self._asSpouse = []  # use a list to handle multiple families
         self._asChild = None
-                
+        self._events = [] # use a list to store multiple life events
+
     def addName(self, names):
         # Extracts name parts from a list of names and stores them
         self._given = names[0]
@@ -59,15 +74,19 @@ class Person():
         # is a child
         self._asChild = famRef
 
+    def addEvent(self, newEvent):
+      # creates a new Event and stores it into events lists
+      self._events.append(newEvent)
+
     def printDescendants(self, prefix=''):
         # print info for this person and then call method in Family
-        print(prefix + self.name())
+        print(prefix + self.name() + self.eventInfo())
         # recursion stops when self is not a spouse
         for fam in self._asSpouse:
             families[fam].printFamily(self._id,prefix)
 
-  # ============================================================================
     def isDescendant(self, personId):
+      # returns a bool true if the person given is a descendant of self
       if self._id == personId: # check self id against personId
        return True
 
@@ -79,8 +98,9 @@ class Person():
           # OR self is not a spouse 
 
       return False
-  # ============================================================================
+
     def printAncestors(self,prefix=''):
+      # prints out the ancestors of self using a tree algo
       if(prefix == ""):
         prefix = '0'
       
@@ -98,12 +118,82 @@ class Person():
           if(s2):
             s2.printAncestors(str(nextPrefix))
         else:
-          print(prefix,self.name())   
-      #print("prefix = ",prefix)
-      spaces = (" " * int(prefix, base = 10))
-      print(spaces,prefix,self.name())
-      
-  # ============================================================================
+          print(prefix,self.name(), self.eventInfo())   
+   
+      spaces = ("  " * int(prefix, base = 10))
+      print(spaces,prefix,self.name(),self.eventInfo())
+
+    def printCousins(self,n=1):
+      # prints out the FIRST COUSINS of self
+      # does not work for nth cousins
+      print("First cousins of", self.name())
+
+      if(self._asChild):
+        parents = []
+        auncles = [] # list of parents siblings
+        cousins = [] # a list of parents siblings children
+
+        # get parents
+        parents  = self.getParents()
+        
+        # get parent siblings
+        if(parents) :
+          for parent in parents:
+            auncles += parent.getSiblings()
+        else:
+          print("No cousins.")
+    
+        # get parents sibling children
+        if(auncles) :
+            for sibling in auncles:
+              cousins += sibling.getChildren()
+        else: 
+          print("No cousins.")
+          
+        # if there is cousins, print them out
+        if (cousins):
+          for cousin in cousins:
+            print(cousin.name(), cousin.eventInfo())
+        else:
+          print("No cousins.") 
+      else:
+        print("No cousins.")
+    
+    def getParents(self):
+      # returns a list of Persons that are parents of self
+      parents = []
+      if(self._asChild):
+        family = getFamily(self._asChild)
+        parent1 = getPerson(family._spouse1[0])
+        parent2 = getPerson(family._spouse2[0])
+        if(parent1):
+          parents.append(parent1)
+          if(parent2):
+            parents.append(parent2)
+        else:
+          parents.append(parent2)
+      return parents
+    
+    def getSiblings(self):
+      siblings = []
+      if(self._asChild):
+        family = getFamily(self._asChild)
+        for childRef in family._children:
+          child = getPerson(childRef)
+          if(child._id != self._id):
+            siblings.append(child)
+      return siblings
+
+    def getChildren(self):
+      children = []
+      if(self._asSpouse):
+        # for every family self is a spouse
+        for famRef in self._asSpouse: 
+          family = getFamily(famRef)
+          for childRef in family._children:
+            children.append(getPerson(childRef))
+      return children
+
     def name (self):
         # returns a simple name string 
         return self._given + ' ' + self._surname.upper()\
@@ -123,7 +213,10 @@ class Person():
     
     def eventInfo(self):
         ## add code here to show information from events once they are recognized
-        return ''
+        eventsStr = ''
+        for event in self._events:
+          eventsStr += (" | " + str(event))
+        return eventsStr
 
     def __str__(self):
         # Returns a string representing all info in a Person instance
@@ -152,6 +245,7 @@ class Family():
         self._spouse1 = None
         self._spouse2 = None
         self._children = []
+        self._events = []
 
     def addSpouse(self, personRef, tag):
         # Stores the string (personRef) indicating a spouse in this family
@@ -163,6 +257,9 @@ class Family():
     def addChild(self, personRef):
         # Adds the string (personRef) indicating a new child to the list
         self._children.append(personRef)
+    
+    def addEvent(self, newEvent):
+      self._events.append(newEvent)
 
     def printFamily(self, firstSpouse, prefix):
         # Used by printDecendants in Person to print other spouse
@@ -178,7 +275,11 @@ class Family():
             if self._spouse1.personRef == firstSpouse:
                 secondSpouse = self._spouse2.personRef
             else: secondSpouse = self._spouse1.personRef
-            print(prefix+ '+' + persons[secondSpouse].name())
+           
+            marriageEvents = ''
+            for event in self._events:
+              marriageEvents += " | " + str(event)
+            print(prefix+ '+' + persons[secondSpouse].name() + marriageEvents)
 
         # Make a recursive call for each child in this family
         for child in self._children:
@@ -197,6 +298,25 @@ class Family():
         return spousePart + childrenPart
 
 # end of class Family
+
+#-----------------------------------------------------------------------
+class Event():
+  def __init__(self):
+    self._date = ""
+    self._place = ""
+
+  def addDate(self, newDate):
+    self._date = newDate
+
+  def addPlace(self, newPlace):
+    self._place = newPlace
+
+  # Constructs a single string that includes all info about the event
+  def __str__(self):
+    eventParts = (self._date + " " + self._place + " ")
+    return eventParts
+
+# end of class Event
 
 #-----------------------------------------------------------------------
 # Global dictionaries used by Person and Family to map INDI and FAM identifier
@@ -254,6 +374,41 @@ def processGEDCOM(file):
                 newPerson.addIsChild(getPointer(line))
             ## add code here to look for other fields
 
+            elif tag == 'BIRT':
+              #print("tag is =", tag)
+              line = f.readline()
+              newEvent = Event()
+              tag = line[2:6]
+              data = line[7:]
+              if(tag == 'DATE'): # check if the data is a date
+                newEvent.addDate("n: " + data.strip())
+                line = f.readline()
+                tag = line[2:6]
+                data = line[7:]
+                if(tag == 'PLAC'): # check if the data is a place
+                  newEvent.addPlace(data.strip())
+                elif(tag == 'PLAC'):
+                  newEvent.addPlace(data.strip())
+              #print("newEvent = ", newEvent)
+              newPerson.addEvent(newEvent)
+            elif tag == 'DEAT':
+              #print("tag is =", tag)
+              line = f.readline()
+              newEvent = Event()
+              tag = line[2:6]
+              data = line[7:]
+              if(tag == 'DATE'): # check if the data is a date
+                newEvent.addDate("d: " + data.strip())
+                line = f.readline()
+                tag = line[2:6]
+                data = line[7:]
+                if(tag == 'PLAC'): # check if the data is a place
+                  newEvent.addPlace(data.strip())
+                elif(tag == 'PLAC'):
+                  newEvent.addPlace(data.strip())
+              #print("newEvent = ", newEvent)
+              newPerson.addEvent(newEvent)
+
             # read to go to next line
             line = f.readline()
 
@@ -269,7 +424,20 @@ def processGEDCOM(file):
             elif tag == 'CHIL':
                 newFamily.addChild(getPointer(line))
             ## add code here to look for other fields 
-
+            elif tag == 'MARR':
+              line = f.readline()
+              newEvent = Event()
+              tag = line[2:6]
+              if(tag == "DATE"):
+                newEvent.addDate("m: " + line[7:].strip())
+                tag = line[2:6]
+                if(tag == "PLAC"):
+                  newEvent.addPlace(line[7:].strip())
+                # for debugging marriage events
+                # print("newEvent =",str(newEvent))
+              elif(tag == "PLAC"):
+                newEvent.addPlace(line[7:].strip())
+              newFamily.addEvent(newEvent)
             # read to go to next line
             line = f.readline()
 

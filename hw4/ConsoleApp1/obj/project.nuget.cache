@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nbPKjuh6oR9owiS+meUsXCz9dahFDdFglpKqhvQM6V2TUl2XrJ31F4tZYQvaQZzUnrnS9fhxZDQw6EH/+4obYg==",
+  "success": true,
+  "projectFilePath": "C:\\dev\\cs3400\\hw4\\hw4\\ConsoleApp1\\ConsoleApp1.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kidla\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
